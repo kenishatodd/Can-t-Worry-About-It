@@ -38,9 +38,9 @@ You need to decide better.`,
   },
   {
     id: "chapter-1",
-    title: "Chapter 1 — The Praise Trap",
+    title: "Chapter 1: The Praise Trap",
     description: "When strength becomes an expectation instead of a choice",
-    content: `# Chapter 1 — The Praise Trap
+    content: `# Chapter 1: The Praise Trap
 
 Strength was praised early in my life.
 
@@ -98,9 +98,9 @@ And survival was never meant to be permanent.`,
   },
   {
     id: "chapter-2",
-    title: "Chapter 2 — Consistency Has a Cost",
+    title: "Chapter 2: Consistency Has a Cost",
     description: "Understanding the hidden price of always showing up",
-    content: `# Chapter 2 — Consistency Has a Cost
+    content: `# Chapter 2: Consistency Has a Cost
 
 For a long time, I didn't realize consistency was costing me anything.
 
@@ -178,9 +178,9 @@ And awareness is where change begins.`,
   },
   {
     id: "chapter-3",
-    title: "Chapter 3 — Available vs. Able",
+    title: "Chapter 3: Available vs. Able",
     description: "Learning the difference between having time and having capacity",
-    content: `# Chapter 3 — Available vs. Able
+    content: `# Chapter 3: Available vs. Able
 
 For a long time, I confused being available with being able.
 
@@ -243,9 +243,9 @@ And learning the difference is what protects your energy — before burnout ever
   },
   {
     id: "chapter-4",
-    title: "Chapter 4 — I'm at Capacity",
+    title: "Chapter 4: I'm at Capacity",
     description: "Learning to say what you mean and mean what you say",
-    content: `# Chapter 4 — I'm at Capacity
+    content: `# Chapter 4: I'm at Capacity
 
 There was a time when I didn't know how to say this out loud:
 
@@ -297,9 +297,9 @@ And once I stopped treating capacity like a failure, I realized it was actually 
   },
   {
     id: "chapter-5",
-    title: "Chapter 5 — Is This Mine to Carry?",
+    title: "Chapter 5: Is This Mine to Carry?",
     description: "Releasing what was never yours to hold",
-    content: `# Chapter 5 — Is This Mine to Carry?
+    content: `# Chapter 5: Is This Mine to Carry?
 
 This was a hard question for me to learn how to ask.
 
@@ -349,9 +349,9 @@ And that reclamation creates space — space to breathe, space to decide, and sp
   },
   {
     id: "chapter-6",
-    title: "Chapter 6 — The Reset Isn't Failure",
+    title: "Chapter 6: The Reset Isn't Failure",
     description: "Understanding that starting over is sometimes the wisest choice",
-    content: `# Chapter 6 — The Reset Isn't Failure
+    content: `# Chapter 6: The Reset Isn't Failure
 
 For a long time, I believed that needing to reset meant I had done something wrong.
 
@@ -399,9 +399,9 @@ And those questions changed everything.`,
   },
   {
     id: "chapter-7",
-    title: "Chapter 7 — Is It Worth It?",
+    title: "Chapter 7: Is It Worth It?",
     description: "The Capacity Check™ — a practice for intentional living",
-    content: `# Chapter 7 — Is It Worth It?
+    content: `# Chapter 7: Is It Worth It?
 
 Eventually, I learned to pause.
 
@@ -467,9 +467,9 @@ That's where alignment begins.`,
   },
   {
     id: "chapter-8",
-    title: "Chapter 8 — Choosing Differently",
+    title: "Chapter 8: Choosing Differently",
     description: "Making decisions that honor who you're becoming",
-    content: `# Chapter 8 — Choosing Differently
+    content: `# Chapter 8: Choosing Differently
 
 Once you become aware of your capacity, you can't unknow it.
 
@@ -523,9 +523,9 @@ And intention creates sustainability — the kind that allows you to keep showin
   },
   {
     id: "chapter-9",
-    title: "Chapter 9 — Can't Worry About It™",
+    title: "Chapter 9: Can't Worry About It™",
     description: "The practice of release and reclaimed peace",
-    content: `# Chapter 9 — Can't Worry About It™
+    content: `# Chapter 9: Can't Worry About It™
 
 Release came last.
 
