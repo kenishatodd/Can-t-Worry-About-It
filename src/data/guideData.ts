@@ -3,8 +3,15 @@ export interface GuideChapter {
   title: string;
   description: string;
   content: string;
-  capacityResult?: string;
+  capacityResults?: string[]; // Maps to capacity result IDs
   isFree: boolean;
+}
+
+// Helper to get recommended chapters for a capacity result
+export function getRecommendedChapters(capacityResultId: string): GuideChapter[] {
+  return guideChapters.filter(
+    (chapter) => chapter.capacityResults?.includes(capacityResultId)
+  );
 }
 
 export const guideChapters: GuideChapter[] = [
@@ -26,6 +33,7 @@ If you've ever wondered why pushing through stopped working, this book is for yo
 
 You don't need to do more.
 You need to decide better.`,
+    capacityResults: ["overflowing", "steady", "reserve", "empty", "gentle-care"],
     isFree: true,
   },
   {
@@ -85,7 +93,7 @@ If strength has ever felt heavier than it should, this isn't about doing less. I
 Because strength that requires you to abandon yourself isn't strength — it's survival.
 
 And survival was never meant to be permanent.`,
-    capacityResult: "all",
+    capacityResults: ["overflowing", "steady", "reserve", "empty", "gentle-care"],
     isFree: true,
   },
   {
@@ -165,7 +173,7 @@ And when consistency is no longer shared, it becomes a signal — not of strengt
 Recognizing that isn't failure. It's awareness.
 
 And awareness is where change begins.`,
-    capacityResult: "reserve",
+    capacityResults: ["reserve", "empty"],
     isFree: false,
   },
   {
@@ -230,7 +238,7 @@ Capacity asks, Can I sustain this without abandoning myself?
 Those are very different questions.
 
 And learning the difference is what protects your energy — before burnout ever has a chance to enter the room.`,
-    capacityResult: "reserve",
+    capacityResults: ["reserve", "steady"],
     isFree: false,
   },
   {
@@ -284,7 +292,7 @@ Being honest about your capacity isn't letting people down.
 It's letting yourself stay intact.
 
 And once I stopped treating capacity like a failure, I realized it was actually information. Information that protected my energy, my peace, and my ability to show up fully where it mattered most.`,
-    capacityResult: "empty",
+    capacityResults: ["empty", "gentle-care"],
     isFree: false,
   },
   {
@@ -336,7 +344,7 @@ When you stop carrying what isn't yours, you don't lose your strength.
 You reclaim it.
 
 And that reclamation creates space — space to breathe, space to decide, and space to live with intention instead of obligation.`,
-    capacityResult: "gentle-care",
+    capacityResults: ["gentle-care", "empty"],
     isFree: false,
   },
   {
@@ -386,7 +394,7 @@ They became checkpoints.
 Moments to ask: Is this still aligned? Is this still sustainable? Is this still worth the cost?
 
 And those questions changed everything.`,
-    capacityResult: "empty",
+    capacityResults: ["reserve", "empty", "gentle-care"],
     isFree: false,
   },
   {
@@ -454,7 +462,7 @@ It's about choosing better.
 And when you combine that question with honesty about your capacity, you stop living on autopilot and start living with intention.
 
 That's where alignment begins.`,
-    capacityResult: "steady",
+    capacityResults: ["steady", "overflowing"],
     isFree: false,
   },
   {
@@ -510,7 +518,7 @@ Choosing differently is not about withdrawal.
 It's about intention.
 
 And intention creates sustainability — the kind that allows you to keep showing up without losing yourself in the process.`,
-    capacityResult: "overflowing",
+    capacityResults: ["overflowing", "steady"],
     isFree: false,
   },
   {
@@ -571,7 +579,7 @@ And peace, once reclaimed, changes how you move through everything.
 
 **With all my heart,**
 **Dr. Kenisha Elaine Todd**`,
-    capacityResult: "gentle-care",
+    capacityResults: ["overflowing", "steady", "reserve", "empty", "gentle-care"],
     isFree: false,
   },
 ];

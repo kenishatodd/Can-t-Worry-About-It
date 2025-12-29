@@ -1,7 +1,8 @@
 import { CapacityResult } from "@/data/quizData";
+import { getRecommendedChapters } from "@/data/guideData";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Heart, Sparkles, BookOpen, Lock } from "lucide-react";
+import { Heart, Sparkles, BookOpen, Lock, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 import PremiumUpgrade from "@/components/PremiumUpgrade";
@@ -14,6 +15,7 @@ interface CapacityResultCardProps {
 const CapacityResultCard = ({ result, onRetake }: CapacityResultCardProps) => {
   const { user, isSubscribed } = useAuth();
   const showFullResults = isSubscribed;
+  const recommendedChapters = getRecommendedChapters(result.id);
 
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
@@ -79,6 +81,38 @@ const CapacityResultCard = ({ result, onRetake }: CapacityResultCardProps) => {
               ))}
             </ul>
           </div>
+
+          {/* Recommended Chapters */}
+          {recommendedChapters.length > 0 && (
+            <div className="bg-card rounded-2xl p-6 shadow-soft mb-8">
+              <h3 className="font-serif text-xl text-primary mb-4 flex items-center gap-2">
+                <BookOpen className="w-5 h-5" />
+                Recommended Reading
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Based on your capacity level, these chapters may resonate with you:
+              </p>
+              <div className="space-y-2">
+                {recommendedChapters.slice(0, 3).map((chapter) => (
+                  <Link
+                    key={chapter.id}
+                    to="/guide"
+                    className="flex items-center justify-between p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors group"
+                  >
+                    <div>
+                      <p className="font-medium text-foreground text-sm group-hover:text-primary transition-colors">
+                        {chapter.title}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {chapter.description}
+                      </p>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </>
       ) : (
         /* Premium Upsell */
