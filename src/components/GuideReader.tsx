@@ -45,59 +45,88 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
     }
   };
 
-  // Render chapter content with basic markdown parsing
+  // Render inline formatting (bold text)
+  const renderInlineFormatting = (text: string) => {
+    const boldRegex = /\*\*(.*?)\*\*/g;
+    const parts = text.split(boldRegex);
+    return parts.map((part, i) =>
+      i % 2 === 1 ? (
+        <strong key={i}>{part}</strong>
+      ) : (
+        <span key={i}>{part}</span>
+      )
+    );
+  };
+
+  // Render chapter content with improved paragraph handling
   const renderContent = (content: string) => {
-    const lines = content.split("\n");
-    return lines.map((line, index) => {
-      if (line.startsWith("# ")) {
+    // Split by double newlines to get paragraphs
+    const blocks = content.split(/\n\n+/);
+    
+    return blocks.map((block, index) => {
+      const trimmedBlock = block.trim();
+      
+      // Skip empty blocks
+      if (!trimmedBlock) return null;
+      
+      // H1 heading
+      if (trimmedBlock.startsWith("# ")) {
         return (
           <h1
             key={index}
             className="font-serif text-3xl md:text-4xl text-primary mb-6 mt-8 first:mt-0"
           >
-            {line.slice(2)}
+            {trimmedBlock.slice(2)}
           </h1>
         );
       }
-      if (line.startsWith("## ")) {
+      
+      // H2 heading
+      if (trimmedBlock.startsWith("## ")) {
         return (
           <h2
             key={index}
             className="font-serif text-2xl text-primary mb-4 mt-8"
           >
-            {line.slice(3)}
+            {trimmedBlock.slice(3)}
           </h2>
         );
       }
-      if (line.startsWith("**") && line.endsWith("**")) {
+      
+      // Horizontal rule
+      if (trimmedBlock === "---") {
+        return <hr key={index} className="my-8 border-border/50" />;
+      }
+      
+      // List items (handle multiple lines starting with -)
+      if (trimmedBlock.startsWith("- ")) {
+        const items = trimmedBlock.split("\n").filter(line => line.startsWith("- "));
         return (
-          <p key={index} className="font-semibold text-foreground mb-4">
-            {line.slice(2, -2)}
+          <ul key={index} className="mb-6 space-y-2">
+            {items.map((item, i) => (
+              <li key={i} className="text-foreground ml-4 flex items-start gap-2">
+                <span className="text-primary mt-1.5">•</span>
+                <span>{renderInlineFormatting(item.slice(2))}</span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
+      
+      // Standalone bold line (entire paragraph is bold)
+      if (trimmedBlock.startsWith("**") && trimmedBlock.endsWith("**") && !trimmedBlock.slice(2, -2).includes("**")) {
+        return (
+          <p key={index} className="font-semibold text-foreground mb-6 text-lg">
+            {trimmedBlock.slice(2, -2)}
           </p>
         );
       }
-      if (line.startsWith("- ")) {
-        return (
-          <li key={index} className="text-foreground ml-4 mb-2">
-            {line.slice(2)}
-          </li>
-        );
-      }
-      if (line.trim() === "") {
-        return <br key={index} />;
-      }
-      // Handle inline bold
-      const boldRegex = /\*\*(.*?)\*\*/g;
-      const parts = line.split(boldRegex);
+      
+      // Regular paragraph - join multiple lines within the block
+      const paragraphText = trimmedBlock.split("\n").join(" ");
       return (
-        <p key={index} className="text-foreground mb-4 leading-relaxed">
-          {parts.map((part, i) =>
-            i % 2 === 1 ? (
-              <strong key={i}>{part}</strong>
-            ) : (
-              <span key={i}>{part}</span>
-            )
-          )}
+        <p key={index} className="text-foreground mb-6 leading-relaxed">
+          {renderInlineFormatting(paragraphText)}
         </p>
       );
     });
