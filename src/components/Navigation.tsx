@@ -1,11 +1,21 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User, LogOut, Crown } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { user, isSubscribed, signOut, loading } = useAuth();
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -44,6 +54,44 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Auth Section */}
+          <div className="hidden md:flex items-center gap-4">
+            {loading ? (
+              <div className="w-8 h-8 rounded-full bg-muted animate-pulse" />
+            ) : user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="relative">
+                    <User className="w-5 h-5" />
+                    {isSubscribed && (
+                      <Crown className="w-3 h-3 text-gold-dark absolute -top-1 -right-1" />
+                    )}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuItem disabled className="text-xs text-muted-foreground">
+                    {user.email}
+                  </DropdownMenuItem>
+                  {isSubscribed && (
+                    <DropdownMenuItem disabled className="text-xs">
+                      <Crown className="w-3 h-3 mr-2 text-gold-dark" />
+                      Premium Member
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={signOut} className="text-destructive">
+                    <LogOut className="w-4 h-4 mr-2" />
+                    Sign Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button asChild variant="outline" size="sm">
+                <Link to="/auth">Sign In</Link>
+              </Button>
+            )}
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -73,6 +121,37 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              <div className="border-t border-border mt-2 pt-2">
+                {user ? (
+                  <>
+                    <div className="px-4 py-2 text-xs text-muted-foreground">
+                      {user.email}
+                      {isSubscribed && (
+                        <span className="ml-2 inline-flex items-center text-gold-dark">
+                          <Crown className="w-3 h-3 mr-1" /> Premium
+                        </span>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => {
+                        signOut();
+                        setIsOpen(false);
+                      }}
+                      className="w-full px-4 py-3 rounded-lg text-sm font-medium text-destructive hover:bg-muted text-left"
+                    >
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/auth"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-3 rounded-lg text-sm font-medium text-primary hover:bg-muted"
+                  >
+                    Sign In
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         )}

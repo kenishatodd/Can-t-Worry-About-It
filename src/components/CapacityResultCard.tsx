@@ -1,8 +1,10 @@
 import { CapacityResult } from "@/data/quizData";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Heart, Sparkles, BookOpen } from "lucide-react";
+import { Heart, Sparkles, BookOpen, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/AuthContext";
+import PremiumUpgrade from "@/components/PremiumUpgrade";
 
 interface CapacityResultCardProps {
   result: CapacityResult;
@@ -10,6 +12,9 @@ interface CapacityResultCardProps {
 }
 
 const CapacityResultCard = ({ result, onRetake }: CapacityResultCardProps) => {
+  const { user, isSubscribed } = useAuth();
+  const showFullResults = isSubscribed;
+
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
       {/* Result Header */}
@@ -22,59 +27,96 @@ const CapacityResultCard = ({ result, onRetake }: CapacityResultCardProps) => {
         </h2>
       </div>
 
-      {/* Affirmation */}
+      {/* Affirmation - Always visible */}
       <div className="bg-card rounded-2xl p-6 md:p-8 shadow-soft mb-6">
         <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed italic">
           "{result.affirmation}"
         </p>
       </div>
 
-      {/* Gentle Next Step */}
-      <div className="bg-secondary/30 rounded-2xl p-6 mb-6">
-        <h3 className="font-serif text-xl text-primary mb-3 flex items-center gap-2">
-          <Sparkles className="w-5 h-5" />
-          Your Gentle Next Step
-        </h3>
-        <p className="text-foreground">{result.gentleNextStep}</p>
-      </div>
+      {showFullResults ? (
+        <>
+          {/* Gentle Next Step */}
+          <div className="bg-secondary/30 rounded-2xl p-6 mb-6">
+            <h3 className="font-serif text-xl text-primary mb-3 flex items-center gap-2">
+              <Sparkles className="w-5 h-5" />
+              Your Gentle Next Step
+            </h3>
+            <p className="text-foreground">{result.gentleNextStep}</p>
+          </div>
 
-      {/* Guidance Cards */}
-      <div className="space-y-4 mb-6">
-        {/* Grounding Exercise */}
-        <div className="bg-card rounded-xl p-5 shadow-soft">
-          <h4 className="font-medium text-primary mb-2">🌱 Grounding Exercise</h4>
-          <p className="text-muted-foreground text-sm">{result.groundingExercise}</p>
+          {/* Guidance Cards */}
+          <div className="space-y-4 mb-6">
+            <div className="bg-card rounded-xl p-5 shadow-soft">
+              <h4 className="font-medium text-primary mb-2">🌱 Grounding Exercise</h4>
+              <p className="text-muted-foreground text-sm">{result.groundingExercise}</p>
+            </div>
+
+            <div className="bg-card rounded-xl p-5 shadow-soft">
+              <h4 className="font-medium text-primary mb-2">💭 Mindset Reframe</h4>
+              <p className="text-muted-foreground text-sm">{result.mindsetReframe}</p>
+            </div>
+
+            <div className="bg-card rounded-xl p-5 shadow-soft">
+              <h4 className="font-medium text-primary mb-2">✨ Optional Action</h4>
+              <p className="text-muted-foreground text-sm">{result.optionalAction}</p>
+            </div>
+          </div>
+
+          {/* Micro Actions */}
+          <div className="bg-muted/50 rounded-2xl p-6 mb-8">
+            <h3 className="font-serif text-xl text-primary mb-4">
+              Three Micro-Actions for Today
+            </h3>
+            <ul className="space-y-3">
+              {result.microActions.map((action, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/50 flex items-center justify-center text-xs font-medium">
+                    {index + 1}
+                  </span>
+                  <span className="text-foreground">{action}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        /* Premium Upsell */
+        <div className="mb-8">
+          <div className="bg-muted/30 rounded-2xl p-6 mb-6 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-muted/80 backdrop-blur-[2px]" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-muted-foreground mb-4">
+                <Lock className="w-4 h-4" />
+                <span className="text-sm font-medium">Full Results Locked</span>
+              </div>
+              <div className="opacity-40 blur-[2px] pointer-events-none">
+                <p className="text-sm mb-2">🌱 Grounding Exercise</p>
+                <p className="text-sm mb-2">💭 Mindset Reframe</p>
+                <p className="text-sm mb-2">✨ Optional Action</p>
+                <p className="text-sm">📋 3 Micro-Actions for Today</p>
+              </div>
+            </div>
+          </div>
+
+          {user ? (
+            <PremiumUpgrade />
+          ) : (
+            <div className="bg-card rounded-2xl p-6 shadow-soft text-center">
+              <Lock className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <h3 className="font-serif text-xl text-primary mb-2">
+                Unlock Your Full Results
+              </h3>
+              <p className="text-muted-foreground mb-4 text-sm">
+                Sign in to get personalized guidance, exercises, and micro-actions based on your capacity level.
+              </p>
+              <Button asChild className="rounded-xl">
+                <Link to="/auth">Sign In to Unlock</Link>
+              </Button>
+            </div>
+          )}
         </div>
-
-        {/* Mindset Reframe */}
-        <div className="bg-card rounded-xl p-5 shadow-soft">
-          <h4 className="font-medium text-primary mb-2">💭 Mindset Reframe</h4>
-          <p className="text-muted-foreground text-sm">{result.mindsetReframe}</p>
-        </div>
-
-        {/* Optional Action */}
-        <div className="bg-card rounded-xl p-5 shadow-soft">
-          <h4 className="font-medium text-primary mb-2">✨ Optional Action</h4>
-          <p className="text-muted-foreground text-sm">{result.optionalAction}</p>
-        </div>
-      </div>
-
-      {/* Micro Actions */}
-      <div className="bg-muted/50 rounded-2xl p-6 mb-8">
-        <h3 className="font-serif text-xl text-primary mb-4">
-          Three Micro-Actions for Today
-        </h3>
-        <ul className="space-y-3">
-          {result.microActions.map((action, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/50 flex items-center justify-center text-xs font-medium">
-                {index + 1}
-              </span>
-              <span className="text-foreground">{action}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      )}
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-4">

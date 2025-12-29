@@ -3,15 +3,17 @@ import { guideChapters, GuideChapter } from "@/data/guideData";
 import { Button } from "@/components/ui/button";
 import { Lock, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
+import PremiumUpgrade from "@/components/PremiumUpgrade";
 
 interface GuideReaderProps {
   isPaidUser?: boolean;
 }
 
 const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
-  const [selectedChapter, setSelectedChapter] = useState<GuideChapter | null>(
-    null
-  );
+  const { user } = useAuth();
+  const [selectedChapter, setSelectedChapter] = useState<GuideChapter | null>(null);
   const [showUpgradePrompt, setShowUpgradePrompt] = useState(false);
 
   const handleChapterClick = (chapter: GuideChapter) => {
@@ -160,24 +162,30 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
 
       {/* Upgrade prompt */}
       {showUpgradePrompt && (
-        <div className="bg-accent/30 rounded-2xl p-6 mb-6 text-center animate-fade-in">
-          <Lock className="w-8 h-8 text-accent-foreground mx-auto mb-3" />
-          <h3 className="font-serif text-xl text-primary mb-2">
-            Unlock the Full Guide
-          </h3>
-          <p className="text-muted-foreground mb-4">
-            Get access to all chapters, personalized guidance based on your
-            capacity results, and audio meditations.
-          </p>
-          <Button className="rounded-xl bg-primary hover:bg-primary/90">
-            Unlock Full Access
-          </Button>
-          <button
-            onClick={() => setShowUpgradePrompt(false)}
-            className="block mx-auto mt-3 text-sm text-muted-foreground hover:text-foreground"
-          >
-            Maybe later
-          </button>
+        <div className="mb-6 animate-fade-in">
+          {user ? (
+            <PremiumUpgrade />
+          ) : (
+            <div className="bg-accent/30 rounded-2xl p-6 text-center">
+              <Lock className="w-8 h-8 text-accent-foreground mx-auto mb-3" />
+              <h3 className="font-serif text-xl text-primary mb-2">
+                Sign In to Unlock
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Create an account to access all chapters, personalized guidance,
+                and audio meditations.
+              </p>
+              <Button asChild className="rounded-xl bg-primary hover:bg-primary/90">
+                <Link to="/auth">Sign In to Continue</Link>
+              </Button>
+              <button
+                onClick={() => setShowUpgradePrompt(false)}
+                className="block mx-auto mt-3 text-sm text-muted-foreground hover:text-foreground"
+              >
+                Maybe later
+              </button>
+            </div>
+          )}
         </div>
       )}
 
