@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import { Heart, Wind, BookOpen, PenLine } from "lucide-react";
+import PremiumUpgrade from "@/components/PremiumUpgrade";
+import { useAuth } from "@/contexts/AuthContext";
+import { Heart, Wind, BookOpen, PenLine, Sparkles } from "lucide-react";
 
 const Index = () => {
+  const { user, isSubscribed } = useAuth();
+
   const features = [
     { icon: Heart, title: "Capacity Checker", description: "Gently assess your emotional capacity", path: "/capacity-checker" },
     { icon: Wind, title: "Pause Tools", description: "Breathing exercises & calming sounds", path: "/pause-tools" },
@@ -24,9 +28,19 @@ const Index = () => {
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving women to check their capacity, regulate stress, and receive guidance without pressure.
             </p>
-            <Button asChild size="lg" className="rounded-xl bg-primary hover:bg-primary/90 h-14 px-8 text-lg">
-              <Link to="/capacity-checker">Check Your Capacity</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="rounded-xl bg-primary hover:bg-primary/90 h-14 px-8 text-lg">
+                <Link to="/capacity-checker">Check Your Capacity</Link>
+              </Button>
+              {!user && (
+                <Button asChild variant="outline" size="lg" className="rounded-xl h-14 px-8 text-lg">
+                  <Link to="/auth">
+                    <Sparkles className="w-5 h-5 mr-2" />
+                    Get Started
+                  </Link>
+                </Button>
+              )}
+            </div>
           </section>
 
           {/* Features */}
@@ -39,6 +53,13 @@ const Index = () => {
               </Link>
             ))}
           </section>
+
+          {/* Premium Section */}
+          {user && !isSubscribed && (
+            <section className="mt-16 max-w-md mx-auto">
+              <PremiumUpgrade />
+            </section>
+          )}
 
           {/* Quote */}
           <section className="mt-16 text-center">
