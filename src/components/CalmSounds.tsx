@@ -20,8 +20,6 @@ const sounds: SoundOption[] = [
 const CalmSounds = () => {
   const [activeSound, setActiveSound] = useState<string | null>(null);
   const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
-  const [oscillator, setOscillator] = useState<OscillatorNode | null>(null);
-  const [gainNode, setGainNode] = useState<GainNode | null>(null);
 
   // Create noise buffer for ambient sounds
   const createNoiseBuffer = (ctx: AudioContext) => {
