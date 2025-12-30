@@ -52,11 +52,14 @@ const PremiumUpgrade = () => {
 
     try {
       console.log('[Checkout] Invoking create-checkout function...');
-      const { data, error } = await supabase.functions.invoke('create-checkout', {
+      const response = await supabase.functions.invoke('create-checkout', {
+        body: {},
         headers: {
           Authorization: `Bearer ${session.access_token}`,
         },
       });
+      
+      const { data, error } = response;
 
       console.log('[Checkout] Response received:', { data, error });
 
