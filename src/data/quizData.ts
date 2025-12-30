@@ -49,16 +49,6 @@ export const quizSections: QuizSection[] = [
       },
       {
         id: "energy-2",
-        text: "How well did you sleep last night?",
-        options: [
-          { text: "Deep, restful sleep", value: 4 },
-          { text: "Decent, woke up once or twice", value: 3 },
-          { text: "Restless, woke up often", value: 2 },
-          { text: "Barely slept at all", value: 1 },
-        ],
-      },
-      {
-        id: "energy-3",
         text: "How would you describe your motivation today?",
         options: [
           { text: "Feeling inspired and focused", value: 4 },
@@ -87,16 +77,6 @@ export const quizSections: QuizSection[] = [
       },
       {
         id: "emotional-2",
-        text: "How easily are you getting triggered today?",
-        options: [
-          { text: "Very grounded and calm", value: 4 },
-          { text: "A little sensitive but managing", value: 3 },
-          { text: "On edge, reacting quickly", value: 2 },
-          { text: "Everything feels like too much", value: 1 },
-        ],
-      },
-      {
-        id: "emotional-3",
         text: "How connected do you feel to yourself?",
         options: [
           { text: "Deeply in tune with my needs", value: 4 },
@@ -125,16 +105,6 @@ export const quizSections: QuizSection[] = [
       },
       {
         id: "time-2",
-        text: "When was the last time you had unscheduled time?",
-        options: [
-          { text: "Today or yesterday", value: 4 },
-          { text: "A few days ago", value: 3 },
-          { text: "I can't remember", value: 2 },
-          { text: "What is that?", value: 1 },
-        ],
-      },
-      {
-        id: "time-3",
         text: "How often do you feel rushed?",
         options: [
           { text: "Rarely, I move at my pace", value: 4 },
@@ -163,16 +133,6 @@ export const quizSections: QuizSection[] = [
       },
       {
         id: "support-2",
-        text: "How comfortable are you asking for help?",
-        options: [
-          { text: "Very comfortable", value: 4 },
-          { text: "Working on it", value: 3 },
-          { text: "It's hard for me", value: 2 },
-          { text: "I never ask", value: 1 },
-        ],
-      },
-      {
-        id: "support-3",
         text: "Do you feel seen and understood?",
         options: [
           { text: "Yes, by people who matter", value: 4 },
@@ -209,26 +169,6 @@ export const quizSections: QuizSection[] = [
           { text: "It's been too long", value: 1 },
         ],
       },
-      {
-        id: "rest-3",
-        text: "How well are you nourishing yourself?",
-        options: [
-          { text: "Good meals, water, movement", value: 4 },
-          { text: "Trying my best", value: 3 },
-          { text: "Survival mode eating", value: 2 },
-          { text: "Neglecting my body", value: 1 },
-        ],
-      },
-      {
-        id: "rest-4",
-        text: "How do you feel about saying 'no'?",
-        options: [
-          { text: "Comfortable and confident", value: 4 },
-          { text: "Getting better at it", value: 3 },
-          { text: "Guilty but trying", value: 2 },
-          { text: "I can't say no", value: 1 },
-        ],
-      },
     ],
   },
 ];
@@ -239,8 +179,8 @@ export const capacityResults: CapacityResult[] = [
     title: "Overflowing Cup",
     color: "text-sage-dark",
     bgColor: "bg-overflowing",
-    minScore: 52,
-    maxScore: 64,
+    minScore: 33,
+    maxScore: 40,
     affirmation: "You're in a beautiful space of abundance. Your cup is full, and you have overflow to share. This is a testament to the boundaries you've held and the care you've given yourself.",
     gentleNextStep: "Consider how you might share this overflow with someone who needs it, or simply bask in this fullness you've created.",
     groundingExercise: "Place your hand on your heart. Take three deep breaths and whisper: 'I am enough, and I have enough.'",
@@ -257,8 +197,8 @@ export const capacityResults: CapacityResult[] = [
     title: "Steady & Supported",
     color: "text-sage-dark",
     bgColor: "bg-steady",
-    minScore: 40,
-    maxScore: 51,
+    minScore: 26,
+    maxScore: 32,
     affirmation: "You're in a place of sustainable rhythm. You have what you need, and you're maintaining a healthy balance. This is the sweet spot of capacity.",
     gentleNextStep: "Keep nurturing this balance. Small, consistent acts of self-care will help you maintain this steady state.",
     groundingExercise: "Stand with your feet firmly planted. Feel your roots going deep into the earth. You are grounded and stable.",
@@ -275,8 +215,8 @@ export const capacityResults: CapacityResult[] = [
     title: "Running on Reserve",
     color: "text-gold-dark",
     bgColor: "bg-reserve",
-    minScore: 28,
-    maxScore: 39,
+    minScore: 18,
+    maxScore: 25,
     affirmation: "You're managing, but your reserves are getting low. This is a gentle warning from your body and soul that it's time to pause and refill.",
     gentleNextStep: "Look at your week and identify one thing you can release, postpone, or delegate. Your 'no' is a gift to yourself.",
     groundingExercise: "Close your eyes. Imagine a golden light filling your cup slowly from the bottom up. You are being replenished.",
@@ -293,8 +233,8 @@ export const capacityResults: CapacityResult[] = [
     title: "Running on Empty",
     color: "text-terracotta",
     bgColor: "bg-empty",
-    minScore: 20,
-    maxScore: 27,
+    minScore: 13,
+    maxScore: 17,
     affirmation: "Beautiful soul, you've been giving more than you have. You're not broken—you're depleted. And depletion can be healed with rest and gentle care.",
     gentleNextStep: "This is not the time for pushing through. This is the time for radical rest and saying no to everything that isn't essential.",
     groundingExercise: "Lie down if you can. Place one hand on your belly, one on your chest. Breathe slowly and say: 'I am allowed to rest.'",
@@ -311,8 +251,8 @@ export const capacityResults: CapacityResult[] = [
     title: "Needs Gentle Care",
     color: "text-warm-brown",
     bgColor: "bg-gentle-care",
-    minScore: 16,
-    maxScore: 19,
+    minScore: 10,
+    maxScore: 12,
     affirmation: "Sweet one, you're in a tender place right now. This isn't weakness—this is your soul asking for the deepest care. You deserve softness.",
     gentleNextStep: "If possible, clear your schedule for the next 24 hours. This is a time for emergency self-care and reaching out for support.",
     groundingExercise: "Wrap your arms around yourself in a gentle hug. Rock slowly side to side. Whisper: 'I am here for myself. I am not alone.'",
