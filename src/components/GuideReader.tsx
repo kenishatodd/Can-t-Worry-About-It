@@ -102,9 +102,9 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
       if (trimmedBlock.startsWith("- ")) {
         const items = trimmedBlock.split("\n").filter(line => line.startsWith("- "));
         return (
-          <ul key={index} className="mb-6 space-y-2">
+          <ul key={index} className="mb-6 space-y-3">
             {items.map((item, i) => (
-              <li key={i} className="text-foreground ml-4 flex items-start gap-2">
+              <li key={i} className="text-foreground text-lg md:text-xl ml-4 flex items-start gap-3">
                 <span className="text-primary mt-1.5">•</span>
                 <span>{renderInlineFormatting(item.slice(2))}</span>
               </li>
@@ -116,7 +116,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
       // Standalone bold line (entire paragraph is bold)
       if (trimmedBlock.startsWith("**") && trimmedBlock.endsWith("**") && !trimmedBlock.slice(2, -2).includes("**")) {
         return (
-          <p key={index} className="font-semibold text-foreground mb-6 text-lg">
+          <p key={index} className="font-semibold text-foreground mb-6 text-xl md:text-2xl">
             {trimmedBlock.slice(2, -2)}
           </p>
         );
@@ -125,7 +125,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
       // Regular paragraph - join multiple lines within the block
       const paragraphText = trimmedBlock.split("\n").join(" ");
       return (
-        <p key={index} className="text-foreground mb-6 leading-relaxed">
+        <p key={index} className="text-foreground text-lg md:text-xl mb-6 leading-relaxed">
           {renderInlineFormatting(paragraphText)}
         </p>
       );
@@ -233,10 +233,10 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
-                <h3 className="font-serif text-lg text-primary mb-1 group-hover:text-primary/80 transition-colors">
+                <h3 className="font-serif text-xl md:text-2xl text-primary mb-1 group-hover:text-primary/80 transition-colors">
                   {chapter.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base md:text-lg text-muted-foreground">
                   {chapter.description}
                 </p>
               </div>
