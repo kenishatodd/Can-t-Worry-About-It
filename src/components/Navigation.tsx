@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CartDrawer } from "@/components/CartDrawer";
 
 const Navigation = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const Navigation = () => {
     { path: "/pause-tools", label: "Pause Tools" },
     { path: "/journal", label: "Journal" },
     { path: "/guide", label: "CWAI Guide" },
+    { path: "/shop", label: "Shop" },
   ];
 
   return (
@@ -54,8 +56,9 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Auth Section */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Cart & Auth Section */}
+          <div className="hidden md:flex items-center gap-2">
+            <CartDrawer />
             {loading ? (
               <div className="w-8 h-8 rounded-full bg-muted animate-pulse" />
             ) : user ? (
