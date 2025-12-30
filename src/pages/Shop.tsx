@@ -13,7 +13,11 @@ const Shop = () => {
     const loadProducts = async () => {
       try {
         const data = await fetchProducts(20);
-        setProducts(data);
+        // Filter out products without images
+        const productsWithImages = data.filter(
+          (product) => product.node.images.edges.length > 0
+        );
+        setProducts(productsWithImages);
       } catch (err) {
         setError("Failed to load products");
         console.error(err);
