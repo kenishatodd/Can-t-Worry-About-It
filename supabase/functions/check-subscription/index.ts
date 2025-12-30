@@ -54,26 +54,20 @@ serve(async (req) => {
     const customerId = customers.data[0].id;
     logStep("Found Stripe customer", { customerId });
 
-    const subscriptions = await stripe.subscriptions.list({
+    // Check for completed one-time payments
+    const paymentIntents = await stripe.paymentIntents.list({
       customer: customerId,
-      status: "active",
-      limit: 1,
+      limit: 100,
     });
 
-    const hasActiveSub = subscriptions.data.length > 0;
-    let subscriptionEnd = null;
+    const hasPurchased = paymentIntents.data.some(
+      (pi: { status: string; amount: number }) => pi.status === "succeeded" && pi.amount === 499
+    );
 
-    if (hasActiveSub) {
-      const subscription = subscriptions.data[0];
-      subscriptionEnd = new Date(subscription.current_period_end * 1000).toISOString();
-      logStep("Active subscription found", { subscriptionId: subscription.id, endDate: subscriptionEnd });
-    } else {
-      logStep("No active subscription found");
-    }
+    logStep("Payment check complete", { hasPurchased });
 
     return new Response(JSON.stringify({
-      subscribed: hasActiveSub,
-      subscription_end: subscriptionEnd
+      subscribed: hasPurchased,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
