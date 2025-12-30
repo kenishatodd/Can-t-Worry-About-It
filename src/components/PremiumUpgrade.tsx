@@ -4,7 +4,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
-import { Crown, Check, Loader2 } from 'lucide-react';
+import { Crown, Check, Loader2, RotateCcw } from 'lucide-react';
 
 const PREMIUM_FEATURES = [
   'Full Capacity Checker results & insights',
@@ -17,6 +17,28 @@ const PREMIUM_FEATURES = [
 const PremiumUpgrade = () => {
   const { session, isSubscribed, checkSubscription } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const [isRestoring, setIsRestoring] = useState(false);
+
+  const handleRestorePurchase = async () => {
+    if (!session) {
+      toast.error('Please sign in to restore your purchase');
+      return;
+    }
+
+    setIsRestoring(true);
+    try {
+      await checkSubscription();
+      if (isSubscribed) {
+        toast.success('Purchase restored successfully!');
+      } else {
+        toast.info('No previous purchase found for this account.');
+      }
+    } catch (err) {
+      toast.error('Failed to restore purchase. Please try again.');
+    } finally {
+      setIsRestoring(false);
+    }
+  };
 
   const handleUpgrade = async () => {
     if (!session) {
@@ -140,6 +162,24 @@ const PremiumUpgrade = () => {
             </>
           ) : (
             'Unlock Premium Access'
+          )}
+        </Button>
+        <Button 
+          variant="ghost" 
+          className="w-full text-muted-foreground hover:text-foreground" 
+          onClick={handleRestorePurchase}
+          disabled={isRestoring}
+        >
+          {isRestoring ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin mr-2" />
+              Restoring...
+            </>
+          ) : (
+            <>
+              <RotateCcw className="w-4 h-4 mr-2" />
+              Restore Purchase
+            </>
           )}
         </Button>
         <p className="text-xs text-muted-foreground text-center">
