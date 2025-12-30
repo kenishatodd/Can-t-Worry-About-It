@@ -115,8 +115,8 @@ const PremiumUpgrade = () => {
           Unlock your complete wellness journey
         </CardDescription>
         <div className="mt-4">
-          <span className="text-4xl font-serif font-semibold text-foreground">$3.99</span>
-          <span className="text-muted-foreground">/month</span>
+          <span className="text-4xl font-serif font-semibold text-foreground">$4.99</span>
+          <span className="text-muted-foreground"> one-time</span>
         </div>
       </CardHeader>
       <CardContent className="space-y-6 relative">
@@ -143,7 +143,7 @@ const PremiumUpgrade = () => {
           )}
         </Button>
         <p className="text-xs text-muted-foreground text-center">
-          Cancel anytime. Secure payment via Stripe.
+          Lifetime access. Secure payment via Stripe.
         </p>
       </CardContent>
     </Card>
