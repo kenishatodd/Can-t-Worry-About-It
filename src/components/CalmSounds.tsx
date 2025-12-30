@@ -23,6 +23,17 @@ const CalmSounds = () => {
   const [oscillator, setOscillator] = useState<OscillatorNode | null>(null);
   const [gainNode, setGainNode] = useState<GainNode | null>(null);
 
+  // Create noise buffer for ambient sounds
+  const createNoiseBuffer = (ctx: AudioContext) => {
+    const bufferSize = 2 * ctx.sampleRate;
+    const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const output = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      output[i] = Math.random() * 2 - 1;
+    }
+    return noiseBuffer;
+  };
+
   // Create ambient sound using Web Audio API
   const createAmbientSound = (type: string) => {
     if (audioContext) {
@@ -30,68 +41,72 @@ const CalmSounds = () => {
     }
 
     const ctx = new AudioContext();
-    const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     const filter = ctx.createBiquadFilter();
+    const noiseBuffer = createNoiseBuffer(ctx);
+    const noiseSource = ctx.createBufferSource();
+    noiseSource.buffer = noiseBuffer;
+    noiseSource.loop = true;
 
     // Different configurations for different sounds
     switch (type) {
       case "rain":
-        // Pink noise for rain
-        const bufferSize = 2 * ctx.sampleRate;
-        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-        const output = noiseBuffer.getChannelData(0);
-        for (let i = 0; i < bufferSize; i++) {
-          output[i] = Math.random() * 2 - 1;
-        }
-        const whiteNoise = ctx.createBufferSource();
-        whiteNoise.buffer = noiseBuffer;
-        whiteNoise.loop = true;
         filter.type = "lowpass";
         filter.frequency.value = 400;
-        whiteNoise.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
         gain.gain.value = 0.1;
-        whiteNoise.start();
-        setAudioContext(ctx);
-        return;
+        break;
       case "ocean":
-        osc.type = "sine";
-        osc.frequency.value = 0.1;
+        // Ocean waves - lower frequency rumble with modulation
+        filter.type = "lowpass";
+        filter.frequency.value = 200;
+        gain.gain.value = 0.15;
+        // Add slow modulation for wave effect
+        const lfoOcean = ctx.createOscillator();
+        const lfoGainOcean = ctx.createGain();
+        lfoOcean.frequency.value = 0.1; // Slow wave rhythm
+        lfoGainOcean.gain.value = 0.08;
+        lfoOcean.connect(lfoGainOcean);
+        lfoGainOcean.connect(gain.gain);
+        lfoOcean.start();
         break;
       case "forest":
-        osc.type = "sine";
-        osc.frequency.value = 200;
+        // Forest - higher frequencies for birds/rustling
+        filter.type = "bandpass";
+        filter.frequency.value = 2000;
+        filter.Q.value = 0.5;
+        gain.gain.value = 0.06;
+        // Add some variation
+        const lfoForest = ctx.createOscillator();
+        const lfoGainForest = ctx.createGain();
+        lfoForest.frequency.value = 0.3;
+        lfoGainForest.gain.value = 0.03;
+        lfoForest.connect(lfoGainForest);
+        lfoGainForest.connect(gain.gain);
+        lfoForest.start();
         break;
       case "wind":
-        osc.type = "sine";
-        osc.frequency.value = 50;
+        // Wind - mid-range whooshing
+        filter.type = "bandpass";
+        filter.frequency.value = 600;
+        filter.Q.value = 0.3;
+        gain.gain.value = 0.12;
+        // Add wind gusts modulation
+        const lfoWind = ctx.createOscillator();
+        const lfoGainWind = ctx.createGain();
+        lfoWind.frequency.value = 0.15;
+        lfoGainWind.gain.value = 0.06;
+        lfoWind.connect(lfoGainWind);
+        lfoGainWind.connect(gain.gain);
+        lfoWind.start();
         break;
     }
 
-    // Create a more natural sound with modulation
-    const lfo = ctx.createOscillator();
-    const lfoGain = ctx.createGain();
-    lfo.frequency.value = 0.2;
-    lfoGain.gain.value = 20;
-    lfo.connect(lfoGain);
-    lfoGain.connect(osc.frequency);
-
-    filter.type = "lowpass";
-    filter.frequency.value = 800;
-
-    osc.connect(filter);
+    noiseSource.connect(filter);
     filter.connect(gain);
     gain.connect(ctx.destination);
-    gain.gain.value = 0.05;
-
-    osc.start();
-    lfo.start();
+    noiseSource.start();
 
     setAudioContext(ctx);
-    setOscillator(osc);
-    setGainNode(gain);
   };
 
   const toggleSound = (soundId: string) => {
