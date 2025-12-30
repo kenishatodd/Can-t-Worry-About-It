@@ -3,8 +3,9 @@ import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.57.2";
 
 const getAllowedOrigins = () => [
-  Deno.env.get("SITE_URL") || "",
   "https://dbeycyobqxbdenwlqjvc.lovableproject.com",
+  "https://e9099354-f31f-453d-94a4-3653e89ad30d.lovableproject.com",
+  Deno.env.get("SITE_URL") || "",
   "http://localhost:8080",
   "http://localhost:5173",
 ].filter(Boolean);
