@@ -104,9 +104,8 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
         return (
           <ul key={index} className="mb-6 space-y-3">
             {items.map((item, i) => (
-              <li key={i} className="text-foreground text-lg md:text-xl ml-4 flex items-start gap-3">
-                <span className="text-primary mt-1.5">•</span>
-                <span>{renderInlineFormatting(item.slice(2))}</span>
+              <li key={i} className="text-foreground text-lg md:text-xl ml-4">
+                {renderInlineFormatting(item.slice(2))}
               </li>
             ))}
           </ul>
