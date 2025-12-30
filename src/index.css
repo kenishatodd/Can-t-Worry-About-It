@@ -117,6 +117,18 @@
     font-family: 'Cormorant Garamond', serif;
     @apply font-medium tracking-tight;
   }
+
+  /* Safe area for bottom nav on iOS */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  /* Add padding to main content for bottom nav on mobile */
+  @media (max-width: 767px) {
+    main {
+      padding-bottom: 5rem;
+    }
+  }
 }
 
 @layer utilities {
