@@ -46,27 +46,43 @@ const PremiumUpgrade = () => {
       return;
     }
 
+    console.log('[Checkout] Starting checkout process...');
+    console.log('[Checkout] Session token available:', !!session.access_token);
     setIsLoading(true);
 
     try {
+      console.log('[Checkout] Invoking create-checkout function...');
       const { data, error } = await supabase.functions.invoke('create-checkout', {
         headers: {
           Authorization: `Bearer ${session.access_token}`,
         },
       });
 
+      console.log('[Checkout] Response received:', { data, error });
+
       if (error) {
+        console.error('[Checkout] Function invoke error:', error);
+        console.error('[Checkout] Error details:', JSON.stringify(error, null, 2));
         toast.error('Failed to start checkout. Please try again.');
-        console.error('Checkout error:', error);
+        return;
+      }
+
+      if (data?.error) {
+        console.error('[Checkout] Server returned error:', data.error);
+        toast.error(data.error || 'Failed to start checkout. Please try again.');
         return;
       }
 
       if (data?.url) {
+        console.log('[Checkout] Opening checkout URL:', data.url);
         window.open(data.url, '_blank');
+      } else {
+        console.error('[Checkout] No URL in response:', data);
+        toast.error('Failed to start checkout. Please try again.');
       }
     } catch (err) {
+      console.error('[Checkout] Caught exception:', err);
       toast.error('Something went wrong. Please try again.');
-      console.error('Checkout error:', err);
     } finally {
       setIsLoading(false);
     }
