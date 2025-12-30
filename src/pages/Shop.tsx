@@ -13,9 +13,12 @@ const Shop = () => {
     const loadProducts = async () => {
       try {
         const data = await fetchProducts(20);
-        // Filter out products without images
+        // Filter out products without images and specific products to hide
+        const hiddenHandles = ['cwai-comfort-tee'];
         const productsWithImages = data.filter(
-          (product) => product.node.images.edges.length > 0
+          (product) => 
+            product.node.images.edges.length > 0 &&
+            !hiddenHandles.includes(product.node.handle)
         );
         setProducts(productsWithImages);
       } catch (err) {
