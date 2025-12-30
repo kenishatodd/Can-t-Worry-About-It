@@ -98,6 +98,16 @@
     @apply border-border;
   }
 
+  html {
+    font-size: 18px; /* Larger base for mobile */
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px; /* Standard for desktop */
+    }
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Nunito Sans', sans-serif;

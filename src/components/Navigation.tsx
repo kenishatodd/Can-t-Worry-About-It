@@ -125,7 +125,7 @@ const Navigation = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                    "px-4 py-4 rounded-lg text-base font-medium transition-colors",
                     location.pathname === item.path
                       ? "bg-primary/10 text-primary"
                       : "text-muted-foreground hover:bg-muted"
