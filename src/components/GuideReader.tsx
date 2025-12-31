@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { guideChapters, GuideChapter } from "@/data/guideData";
+import { guideChapters as staticChapters, GuideChapter as StaticGuideChapter } from "@/data/guideData";
+import { useGuideChapters, GuideChapter as DbGuideChapter } from "@/hooks/useGuideChapters";
+import { useAdminRole } from "@/hooks/useAdminRole";
 import { Button } from "@/components/ui/button";
-import { Lock, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { Lock, BookOpen, ChevronLeft, ChevronRight, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
@@ -11,18 +13,46 @@ interface GuideReaderProps {
   isPaidUser?: boolean;
 }
 
+// Unified chapter type for display
+interface DisplayChapter {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  isFree: boolean;
+}
+
 const ADMIN_EMAILS = ["drtodd@myyahoo.com"];
 
 const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
   const { user } = useAuth();
-  const [selectedChapter, setSelectedChapter] = useState<GuideChapter | null>(null);
+  const { isAdmin } = useAdminRole();
+  const { data: dbChapters, isLoading } = useGuideChapters();
+  const [selectedChapter, setSelectedChapter] = useState<DisplayChapter | null>(null);
   const [showUpgradePrompt, setShowUpgradePrompt] = useState(false);
 
-  // Unlock all content for admin emails
-  const isAdmin = user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase());
-  const hasFullAccess = isPaidUser || isAdmin;
+  // Convert DB chapters to display format, or fallback to static chapters
+  const chapters: DisplayChapter[] = dbChapters && dbChapters.length > 0
+    ? dbChapters.map((ch) => ({
+        id: ch.id,
+        title: ch.title,
+        description: ch.description,
+        content: ch.content,
+        isFree: ch.is_free,
+      }))
+    : staticChapters.map((ch) => ({
+        id: ch.id,
+        title: ch.title,
+        description: ch.description,
+        content: ch.content,
+        isFree: ch.isFree,
+      }));
 
-  const handleChapterClick = (chapter: GuideChapter) => {
+  // Unlock all content for admin emails or admin role
+  const isAdminEmail = user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase());
+  const hasFullAccess = isPaidUser || isAdmin || isAdminEmail;
+
+  const handleChapterClick = (chapter: DisplayChapter) => {
     if (!chapter.isFree && !hasFullAccess) {
       setShowUpgradePrompt(true);
       return;
@@ -31,12 +61,12 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
   };
 
   const currentIndex = selectedChapter
-    ? guideChapters.findIndex((c) => c.id === selectedChapter.id)
+    ? chapters.findIndex((c) => c.id === selectedChapter.id)
     : -1;
 
   const goToNext = () => {
-    if (currentIndex < guideChapters.length - 1) {
-      const nextChapter = guideChapters[currentIndex + 1];
+    if (currentIndex < chapters.length - 1) {
+      const nextChapter = chapters[currentIndex + 1];
       if (!nextChapter.isFree && !hasFullAccess) {
         setShowUpgradePrompt(true);
         return;
@@ -47,7 +77,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
 
   const goToPrev = () => {
     if (currentIndex > 0) {
-      setSelectedChapter(guideChapters[currentIndex - 1]);
+      setSelectedChapter(chapters[currentIndex - 1]);
     }
   };
 
@@ -137,6 +167,14 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
     });
   };
 
+  if (isLoading) {
+    return (
+      <div className="w-full max-w-2xl mx-auto text-center py-12">
+        <div className="animate-pulse text-muted-foreground">Loading chapters...</div>
+      </div>
+    );
+  }
+
   if (selectedChapter) {
     return (
       <div className="w-full max-w-3xl mx-auto">
@@ -170,7 +208,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
           </Button>
           <Button
             onClick={goToNext}
-            disabled={currentIndex === guideChapters.length - 1}
+            disabled={currentIndex === chapters.length - 1}
             className="rounded-xl gap-2 bg-primary hover:bg-primary/90"
           >
             Next
@@ -192,6 +230,14 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
         <p className="text-muted-foreground">
           by Dr. Kenisha Elaine
         </p>
+        {(isAdmin || isAdminEmail) && (
+          <Link to="/admin/guide">
+            <Button variant="outline" size="sm" className="mt-4 gap-2">
+              <Settings className="w-4 h-4" />
+              Manage Chapters
+            </Button>
+          </Link>
+        )}
       </div>
 
       {/* Upgrade prompt */}
@@ -225,7 +271,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
 
       {/* Chapter list */}
       <div className="space-y-3">
-        {guideChapters.map((chapter) => (
+        {chapters.map((chapter) => (
           <button
             key={chapter.id}
             onClick={() => handleChapterClick(chapter)}
