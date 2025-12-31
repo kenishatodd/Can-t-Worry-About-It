@@ -13,6 +13,7 @@ import Guide from "./pages/Guide";
 import Auth from "./pages/Auth";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
+import AdminGuide from "./pages/AdminGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/pause-tools" element={<PauseTools />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/guide" element={<Guide />} />
+            <Route path="/admin/guide" element={<AdminGuide />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:handle" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
