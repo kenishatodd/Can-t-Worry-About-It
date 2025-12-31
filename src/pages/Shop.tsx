@@ -14,7 +14,7 @@ const Shop = () => {
       try {
         const data = await fetchProducts(20);
         // Filter out products without images and specific products to hide
-        const hiddenHandles = ['cwai-comfort-tee'];
+        const hiddenHandles = ['cwai-comfort-tee', 'cwai-calm-candle'];
         const productsWithImages = data.filter(
           (product) => 
             product.node.images.edges.length > 0 &&
