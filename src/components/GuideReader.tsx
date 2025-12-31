@@ -11,13 +11,19 @@ interface GuideReaderProps {
   isPaidUser?: boolean;
 }
 
+const ADMIN_EMAILS = ["drtodd@myyahoo.com"];
+
 const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
   const { user } = useAuth();
   const [selectedChapter, setSelectedChapter] = useState<GuideChapter | null>(null);
   const [showUpgradePrompt, setShowUpgradePrompt] = useState(false);
 
+  // Unlock all content for admin emails
+  const isAdmin = user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase());
+  const hasFullAccess = isPaidUser || isAdmin;
+
   const handleChapterClick = (chapter: GuideChapter) => {
-    if (!chapter.isFree && !isPaidUser) {
+    if (!chapter.isFree && !hasFullAccess) {
       setShowUpgradePrompt(true);
       return;
     }
@@ -31,7 +37,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
   const goToNext = () => {
     if (currentIndex < guideChapters.length - 1) {
       const nextChapter = guideChapters[currentIndex + 1];
-      if (!nextChapter.isFree && !isPaidUser) {
+      if (!nextChapter.isFree && !hasFullAccess) {
         setShowUpgradePrompt(true);
         return;
       }
@@ -225,7 +231,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
             onClick={() => handleChapterClick(chapter)}
             className={cn(
               "w-full text-left p-5 rounded-xl transition-all duration-300 hover-lift group",
-              chapter.isFree || isPaidUser
+              chapter.isFree || hasFullAccess
                 ? "bg-card shadow-soft hover:shadow-soft-lg"
                 : "bg-muted/50"
             )}
@@ -239,7 +245,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
                   {chapter.description}
                 </p>
               </div>
-              {!chapter.isFree && !isPaidUser && (
+              {!chapter.isFree && !hasFullAccess && (
                 <Lock className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
               )}
             </div>
