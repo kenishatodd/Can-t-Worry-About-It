@@ -38,6 +38,41 @@ const signs = [
   "Losing enthusiasm for work you once cared about",
 ];
 
+const frameworkSteps = [
+  {
+    letter: "C",
+    word: "CHECK",
+    icon: Search,
+    question: "What is happening, and what capacity do I have?",
+    description:
+      "Pause and assess the situation honestly. Name your current emotional, mental, and physical capacity before deciding what to do next.",
+  },
+  {
+    letter: "W",
+    word: "WEIGH",
+    icon: Scale,
+    question: "What matters here? What is my responsibility?",
+    description:
+      "Discern what belongs to you and what belongs to someone else. Weigh urgency against importance, and ownership against influence.",
+  },
+  {
+    letter: "A",
+    word: "ACT",
+    icon: PlayCircle,
+    question: "What action, conversation, decision, delegation, or boundary is required?",
+    description:
+      "Take responsibility for your part. Have the hard conversation, make the decision, set the boundary, or delegate what is not yours to carry.",
+  },
+  {
+    letter: "I",
+    word: "INTENTIONALLY RELEASE",
+    icon: Hand,
+    question: "After I've acted responsibly, what do I need to stop carrying?",
+    description:
+      "Accountability first, release second. Once you have done what is yours to do, let go of outcomes, opinions, and burdens outside your control.",
+  },
+];
+
 const LeadershipWellness = () => {
   return (
     <>
