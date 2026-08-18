@@ -24,6 +24,7 @@ const Navigation = () => {
     { path: "/pause-tools", label: "Pause Tools" },
     { path: "/journal", label: "Journal" },
     { path: "/guide", label: "CWAI Guide" },
+    { path: "/blog", label: "Blog" },
     { path: "/shop", label: "Shop" },
   ];
 
