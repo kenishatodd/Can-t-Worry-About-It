@@ -33,7 +33,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl md:text-3xl font-medium text-primary">
+            <span className="font-script text-3xl md:text-4xl font-bold text-foreground leading-none">
               CWAI
             </span>
           </Link>
