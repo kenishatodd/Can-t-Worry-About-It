@@ -30,11 +30,15 @@ export const useGuideChapters = () => {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('guide_chapters')
-        .select('*')
+        .select('*, guide_chapter_content(content)')
         .order('sort_order', { ascending: true });
 
       if (error) throw error;
-      return data as GuideChapter[];
+
+      return (data ?? []).map((row: any) => ({
+        ...row,
+        content: row.guide_chapter_content?.content ?? '',
+      })) as GuideChapter[];
     },
   });
 };
@@ -43,7 +47,7 @@ export const useCreateChapter = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (chapter: GuideChapterInput) => {
+    mutationFn: async ({ content, ...chapter }: GuideChapterInput) => {
       const { data, error } = await supabase
         .from('guide_chapters')
         .insert(chapter)
@@ -51,6 +55,12 @@ export const useCreateChapter = () => {
         .single();
 
       if (error) throw error;
+
+      const { error: contentError } = await supabase
+        .from('guide_chapter_content')
+        .insert({ chapter_id: data.id, content });
+
+      if (contentError) throw contentError;
       return data;
     },
     onSuccess: () => {
@@ -63,7 +73,7 @@ export const useUpdateChapter = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async ({ id, ...updates }: Partial<GuideChapter> & { id: string }) => {
+    mutationFn: async ({ id, content, ...updates }: Partial<GuideChapter> & { id: string }) => {
       const { data, error } = await supabase
         .from('guide_chapters')
         .update(updates)
@@ -72,6 +82,15 @@ export const useUpdateChapter = () => {
         .single();
 
       if (error) throw error;
+
+      if (typeof content === 'string') {
+        const { error: contentError } = await supabase
+          .from('guide_chapter_content')
+          .upsert({ chapter_id: id, content }, { onConflict: 'chapter_id' });
+
+        if (contentError) throw contentError;
+      }
+
       return data;
     },
     onSuccess: () => {
@@ -97,3 +116,4 @@ export const useDeleteChapter = () => {
     },
   });
 };
+
