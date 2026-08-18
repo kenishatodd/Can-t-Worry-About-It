@@ -49,6 +49,9 @@ const Shop = () => {
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               Gentle reminders to wear. Self-care you can carry with you.
             </p>
+            <span className="inline-block mt-4 px-4 py-1.5 rounded-full bg-accent/10 text-accent font-medium text-sm tracking-wide">
+              Coming Soon
+            </span>
           </section>
 
           {/* Products Grid */}
