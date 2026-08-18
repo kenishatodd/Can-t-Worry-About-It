@@ -1,43 +1,14 @@
-import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
-import { ProductCard } from "@/components/ProductCard";
-import { fetchProducts, ShopifyProduct } from "@/lib/shopify";
-import { Loader2, ShoppingBag } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import Seo from "@/components/Seo";
 
 const Shop = () => {
-  const [products, setProducts] = useState<ShopifyProduct[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadProducts = async () => {
-      try {
-        const data = await fetchProducts(20);
-        // Filter out products without images and specific products to hide
-        const hiddenHandles = ['cwai-comfort-tee', 'cwai-calm-candle'];
-        const productsWithImages = data.filter(
-          (product) => 
-            product.node.images.edges.length > 0 &&
-            !hiddenHandles.includes(product.node.handle)
-        );
-        setProducts(productsWithImages);
-      } catch (err) {
-        setError("Failed to load products");
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadProducts();
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="CWAI Shop — Gentle Reminders You Can Wear"
-        description="Shop CWAI apparel and self-care goods. Gentle reminders to carry with you, from Dr. Kenisha Todd."
+        title="CWAI Shop — Coming Soon"
+        description="The CWAI shop is coming soon. Gentle reminders to wear and self-care you can carry with you, from Dr. Kenisha Todd."
         path="/shop"
       />
       <Navigation />
@@ -49,32 +20,18 @@ const Shop = () => {
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               Gentle reminders to wear. Self-care you can carry with you.
             </p>
-            <span className="inline-block mt-4 px-4 py-1.5 rounded-full bg-accent/10 text-accent font-medium text-sm tracking-wide">
+            <span className="inline-block mt-6 px-6 py-2.5 rounded-full bg-accent text-primary font-semibold text-2xl md:text-3xl tracking-wide">
               Coming Soon
             </span>
           </section>
 
-          {/* Products Grid */}
-          {isLoading ? (
-            <div className="flex items-center justify-center py-20">
-              <Loader2 className="h-8 w-8 animate-spin text-primary" />
-            </div>
-          ) : error ? (
-            <div className="text-center py-20">
-              <p className="text-muted-foreground">{error}</p>
-            </div>
-          ) : products.length === 0 ? (
-            <div className="text-center py-20">
-              <ShoppingBag className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">No products found</p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {products.map((product) => (
-                <ProductCard key={product.node.id} product={product} />
-              ))}
-            </div>
-          )}
+          {/* Coming Soon Message */}
+          <div className="text-center py-16">
+            <ShoppingBag className="h-16 w-16 text-muted-foreground mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground max-w-md mx-auto">
+              We're curating something special. Check back soon for CWAI apparel and self-care goods.
+            </p>
+          </div>
 
           {/* Quote */}
           <section className="mt-16 text-center">
