@@ -22,8 +22,8 @@ const Index = () => {
         <div className="container max-w-4xl mx-auto">
           {/* Hero */}
           <section className="text-center mb-16 animate-fade-in">
-            <h1 className="font-serif text-5xl md:text-7xl text-primary mb-4">CWAI</h1>
-            <p className="font-serif text-2xl md:text-3xl text-muted-foreground mb-2">Can't Worry About It</p>
+            <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">CWAI</h1>
+            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">Can't Worry About It</p>
             <p className="text-muted-foreground mb-8">by Dr. Kenisha Elaine</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving women to check their capacity, regulate stress, and receive guidance without pressure.
@@ -33,7 +33,7 @@ const Index = () => {
                 <Link to="/capacity-checker">Check Your Capacity</Link>
               </Button>
               {!user && (
-                <Button asChild variant="outline" size="lg" className="rounded-xl h-14 px-8 text-lg">
+                <Button asChild variant="outline" size="lg" className="rounded-xl h-14 px-8 text-lg bg-accent text-accent-foreground border-accent hover:bg-accent/90 hover:text-accent-foreground">
                   <Link to="/auth">
                     <Sparkles className="w-5 h-5 mr-2" />
                     Get Started

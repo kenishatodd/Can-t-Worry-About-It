@@ -33,7 +33,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl md:text-3xl font-medium text-primary">
+            <span className="font-script text-3xl md:text-4xl font-bold text-foreground leading-none">
               CWAI
             </span>
           </Link>
@@ -45,10 +45,10 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm font-medium transition-colors hover:text-foreground border-b-2 pb-1",
                   location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-foreground border-accent"
+                    : "text-muted-foreground border-transparent"
                 )}
               >
                 {item.label}
