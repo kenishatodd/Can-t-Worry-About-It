@@ -86,7 +86,11 @@ Rest is not a reward. It is a requirement for sustainable leadership.
 
 If you are not sure where your stress is coming from, start with the CWAI Capacity Checker. It helps you tune into your energy, emotions, and needs in just a few minutes — without pressure, performance, or perfection.
 
-[Check your capacity today](/capacity-checker).`,
+[Check your capacity today](/capacity-checker).
+
+## Explore leadership wellness
+
+For a deeper look at how emotional capacity, rest, and sustainable leadership connect, read about [leadership wellness](/leadership-wellness).`,
   },
   {
     slug: "manage-anxiety-at-work",
@@ -235,7 +239,11 @@ Restoration can include:
 
 The CWAI Capacity Checker is designed to help you assess your emotional capacity in just a few minutes. From there, you receive personalized guidance that meets you where you are.
 
-[Check your emotional capacity](/capacity-checker).`,
+[Check your emotional capacity](/capacity-checker).
+
+## Leadership wellness starts with awareness
+
+Emotional capacity is the foundation of [leadership wellness](/leadership-wellness). When leaders know their own capacity, they can protect it — and lead from a place of clarity instead of depletion.`,
   },
 ];
 
