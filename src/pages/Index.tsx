@@ -29,7 +29,7 @@ const Index = () => {
           {/* Hero */}
           <section className="text-center mb-16 animate-fade-in">
             <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">
-              CWAI <span className="sr-only">— Emotional Capacity Tools for Leaders</span>
+              CWAI <span className="sr-only">| Emotional Capacity Tools for Leaders</span>
             </h1>
             <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">Can't Worry About It</p>
             <p className="font-serif text-lg md:text-xl text-muted-foreground mb-2">Emotional Capacity Tools for Leaders</p>

@@ -233,7 +233,7 @@ For a deeper look at how emotional capacity, rest, and sustainable leadership co
     title: "How to Manage Anxiety at Work as a High-Achieving Leader",
     metaTitle: "How to Manage Anxiety at Work | CWAI",
     metaDescription:
-      "Gentle strategies for managing work anxiety in the moment — plus a simple way to understand what your nervous system is really asking for.",
+      "Gentle strategies for managing work anxiety in the moment, plus a simple way to understand what your nervous system is really asking for.",
     publishedAt: "2026-06-18",
     readTime: "5 min read",
     category: "Emotional Wellness",
