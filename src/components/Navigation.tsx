@@ -26,6 +26,7 @@ const Navigation = () => {
     { path: "/guide", label: "CWAI Guide" },
     { path: "/blog", label: "Blog" },
     { path: "/shop", label: "Shop" },
+    { path: "/about", label: "About" },
   ];
 
   return (
