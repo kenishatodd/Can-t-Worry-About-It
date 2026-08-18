@@ -19,7 +19,7 @@ const About = () => {
   return (
     <>
       <Seo
-        title="About Dr. Kenisha Todd | CWAI — Can't Worry About It"
+        title="About Dr. Kenisha Todd | CWAI | Can't Worry About It"
         description="Dr. Kenisha Todd is a leadership consultant, educator, counselor, and creative strategist helping leaders build clarity, capacity, and purpose without burnout."
         path="/about"
         jsonLd={{

@@ -13,7 +13,7 @@ const PauseTools = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="Pause Tools — Breathing Exercises & Calm Sounds | CWAI"
+        title="Pause Tools | Breathing Exercises & Calm Sounds | CWAI"
         description="Take 60 seconds to reset with guided breathing, gentle reminders, and calming sounds designed for busy leaders."
         path="/pause-tools"
       />

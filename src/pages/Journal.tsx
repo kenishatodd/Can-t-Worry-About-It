@@ -6,7 +6,7 @@ const Journal = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="Gentle Journaling — Write Without Pressure | CWAI"
+        title="Gentle Journaling | Write Without Pressure | CWAI"
         description="A private, judgment-free journal with gentle prompts to help leaders process stress and protect their capacity."
         path="/journal"
       />
