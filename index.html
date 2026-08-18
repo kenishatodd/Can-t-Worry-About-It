@@ -23,14 +23,49 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "CWAI — Can't Worry About It",
-        "url": "https://www.cantworryaboutit.com",
-        "description": "A gentle wellness app for high-achieving leaders to check emotional capacity, regulate stress, and receive guidance without pressure.",
-        "founder": {
-          "@type": "Person",
-          "name": "Dr. Kenisha Todd"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.cantworryaboutit.com/#organization",
+            "name": "Can't Worry About It",
+            "alternateName": ["CWAI", "Cant Worry About It", "CWAI — Can't Worry About It"],
+            "url": "https://www.cantworryaboutit.com",
+            "logo": "https://www.cantworryaboutit.com/favicon.png",
+            "image": "https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png",
+            "description": "A gentle wellness app for high-achieving leaders to check emotional capacity, regulate stress, and receive guidance without pressure.",
+            "founder": { "@id": "https://www.cantworryaboutit.com/#kenisha-todd" },
+            "employee": { "@id": "https://www.cantworryaboutit.com/#kenisha-todd" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.cantworryaboutit.com/#kenisha-todd",
+            "name": "Dr. Kenisha Todd",
+            "alternateName": ["Kenisha Todd", "Dr. Todd", "Dr Kenisha Todd"],
+            "honorificPrefix": "Dr.",
+            "givenName": "Kenisha",
+            "familyName": "Todd",
+            "jobTitle": "Founder",
+            "description": "Founder of CWAI (Can't Worry About It), creating emotional capacity and leadership wellness tools for high-achieving leaders.",
+            "image": "https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png",
+            "url": "https://www.cantworryaboutit.com",
+            "worksFor": { "@id": "https://www.cantworryaboutit.com/#organization" },
+            "knowsAbout": [
+              "Emotional capacity",
+              "Leadership wellness",
+              "Burnout prevention",
+              "Stress regulation"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.cantworryaboutit.com/#website",
+            "name": "CWAI — Can't Worry About It",
+            "alternateName": "CWAI",
+            "url": "https://www.cantworryaboutit.com",
+            "publisher": { "@id": "https://www.cantworryaboutit.com/#organization" },
+            "inLanguage": "en-US"
+          }
+        ]
       }
     </script>
   </head>
