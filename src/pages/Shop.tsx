@@ -6,32 +6,6 @@ import { Loader2, ShoppingBag } from "lucide-react";
 import Seo from "@/components/Seo";
 
 const Shop = () => {
-  const [products, setProducts] = useState<ShopifyProduct[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadProducts = async () => {
-      try {
-        const data = await fetchProducts(20);
-        // Filter out products without images and specific products to hide
-        const hiddenHandles = ['cwai-comfort-tee', 'cwai-calm-candle'];
-        const productsWithImages = data.filter(
-          (product) => 
-            product.node.images.edges.length > 0 &&
-            !hiddenHandles.includes(product.node.handle)
-        );
-        setProducts(productsWithImages);
-      } catch (err) {
-        setError("Failed to load products");
-        console.error(err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadProducts();
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-calm">
