@@ -70,7 +70,7 @@ I learned how to stay composed when I was tired. How to show up even when I was 
 
 **Strength became something I performed instead of something I felt.**
 
-There's a moment many women experience but rarely name — the moment when strength quietly shifts from choice to obligation. When people stop asking if you can handle something and start assuming you will.
+There's a moment many leaders experience but rarely name — the moment when strength quietly shifts from choice to obligation. When people stop asking if you can handle something and start assuming you will.
 
 That's the trap.
 
