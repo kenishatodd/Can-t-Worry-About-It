@@ -149,6 +149,57 @@ const About = () => {
               </div>
             </section>
 
+            {/* Work With Me */}
+            <section className="bg-card rounded-2xl p-8 md:p-12 shadow-soft mb-16 border border-border">
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4 text-center">
+                Work With Dr. Todd
+              </h2>
+              <p className="text-foreground/90 text-lg md:text-xl leading-relaxed text-center mb-8 max-w-2xl mx-auto">
+                Ready to lead with clarity, capacity, and purpose? Let’s talk about what support looks like for you or your organization.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-start gap-3 bg-background/60 rounded-xl p-4">
+                  <Users className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-medium text-foreground">Leadership Consulting</h3>
+                    <p className="text-muted-foreground text-sm">Strategy, culture, and sustainable leadership systems.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-background/60 rounded-xl p-4">
+                  <Sparkles className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-medium text-foreground">Speaking & Facilitation</h3>
+                    <p className="text-muted-foreground text-sm">Keynotes, workshops, and professional learning experiences.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-background/60 rounded-xl p-4">
+                  <Heart className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-medium text-foreground">Coaching & Capacity Work</h3>
+                    <p className="text-muted-foreground text-sm">One-on-one support for leaders ready to protect their energy.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-background/60 rounded-xl p-4">
+                  <Lightbulb className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-medium text-foreground">Creative Strategy</h3>
+                    <p className="text-muted-foreground text-sm">Visual storytelling and brand-aligned creative direction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <p className="text-muted-foreground mb-3">Call or text to start the conversation</p>
+                <a
+                  href="tel:+14697859470"
+                  className="inline-flex items-center gap-2 font-serif text-3xl md:text-4xl text-primary hover:text-primary/80 transition-colors"
+                >
+                  (469) 785-9470
+                </a>
+              </div>
+            </section>
+
             {/* Closing CTA */}
             <section className="text-center bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 shadow-soft">
               <p className="text-lg md:text-xl leading-relaxed mb-6 opacity-95">
