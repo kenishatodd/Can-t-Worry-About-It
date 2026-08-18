@@ -5,12 +5,18 @@ import GentleReminder from "@/components/GentleReminder";
 import CalmSounds from "@/components/CalmSounds";
 import { Button } from "@/components/ui/button";
 import { Play, Pause } from "lucide-react";
+import Seo from "@/components/Seo";
 
 const PauseTools = () => {
   const [isBreathing, setIsBreathing] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-calm">
+      <Seo
+        title="Pause Tools — Breathing Exercises & Calm Sounds | CWAI"
+        description="Take 60 seconds to reset with guided breathing, gentle reminders, and calming sounds designed for busy leaders."
+        path="/pause-tools"
+      />
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-2xl mx-auto">
