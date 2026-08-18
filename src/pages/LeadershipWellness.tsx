@@ -44,7 +44,7 @@ const LeadershipWellness = () => {
       <Seo
         title="Leadership Capacity: A Framework for Sustainable Leadership | CWAI"
         description="Leadership capacity helps high-achieving leaders lead with clarity, capacity, and purpose without burning out. Explore the CWAI approach by Dr. Kenisha Todd."
-        path="/leadership-capacity"
+        path="/leadership-wellness"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
@@ -61,10 +61,10 @@ const LeadershipWellness = () => {
             name: "Can't Worry About It",
             "@id": "https://www.cantworryaboutit.com/#organization",
           },
-          url: "https://www.cantworryaboutit.com/leadership-capacity",
+          url: "https://www.cantworryaboutit.com/leadership-wellness",
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.cantworryaboutit.com/leadership-capacity",
+            "@id": "https://www.cantworryaboutit.com/leadership-wellness",
           },
         }}
       />
@@ -89,7 +89,7 @@ const LeadershipWellness = () => {
             {/* What is leadership capacity */}
             <section className="prose prose-lg max-w-none mb-16">
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-6">
-                Leadership capacity is the practice of protecting your emotional, mental, and physical capacity so you can lead with consistency and care. It is not a luxury or a soft skill. It is a strategic discipline.
+                Leadership capacity is the practice of protecting your emotional, mental, and physical resources so you can lead with consistency and care. It is not a luxury or a soft skill. It is a strategic discipline.
               </p>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-6">
                 High-achieving leaders are often praised for how much they carry. But being capable of carrying something does not always mean it belongs to you. Leadership capacity helps you distinguish between what requires your energy and what you can release.
