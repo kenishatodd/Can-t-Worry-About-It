@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Reduce Stress at Work Without Burning Out",
     metaTitle: "How to Reduce Stress at Work Without Burning Out | CWAI",
     metaDescription:
-      "Practical, gentle ways to lower stress at work — from micro-pauses to boundary-setting — so high-achieving women can lead without burning out.",
+      "Practical, gentle ways to lower stress at work — from micro-pauses to boundary-setting — so high-achieving leaders can lead without burning out.",
     publishedAt: "2026-08-18",
     readTime: "6 min read",
     category: "Leadership & Capacity",
@@ -24,13 +24,13 @@ export const blogPosts: BlogPost[] = [
       "Stress at work doesn't always mean you need a new job. Sometimes it means you need a new rhythm. Here are gentle, evidence-backed ways to reduce stress without pretending everything is fine.",
     content: `## The stress signal is information, not weakness
 
-If you are a high-achieving woman carrying responsibility at work, at home, and in your community, stress is not a personal failure. It is a signal. Your body and mind are telling you that the demand on your capacity is exceeding the support you are receiving.
+If you are a high-achieving leader carrying responsibility at work, at home, and in your community, stress is not a personal failure. It is a signal. Your body and mind are telling you that the demand on your capacity is exceeding the support you are receiving.
 
 Learning how to reduce stress at work starts with listening to that signal instead of overriding it.
 
 ## Name the pressure before you try to fix it
 
-Many women try to manage stress by working harder. But stress is not a productivity problem. It is a capacity problem.
+Many high achievers try to manage stress by working harder. But stress is not a productivity problem. It is a capacity problem.
 
 Before you change anything, name what is actually draining you:
 
