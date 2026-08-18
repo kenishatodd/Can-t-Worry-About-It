@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import { Heart, Wind, CheckCircle, ArrowRight, Sparkles, Users } from "lucide-react";
+import { Heart, Wind, CheckCircle, ArrowRight, Sparkles, Users, Search, Scale, PlayCircle, Hand } from "lucide-react";
 
 const practices = [
   {
