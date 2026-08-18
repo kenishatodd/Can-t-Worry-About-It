@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
-import { ProductCard } from "@/components/ProductCard";
-import { fetchProducts, ShopifyProduct } from "@/lib/shopify";
-import { Loader2, ShoppingBag } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import Seo from "@/components/Seo";
 
 const Shop = () => {
