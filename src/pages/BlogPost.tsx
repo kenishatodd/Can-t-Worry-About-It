@@ -187,7 +187,7 @@ const BlogPost = () => {
 
                   return (
                     <p key={index} className="text-foreground text-lg leading-relaxed mb-6">
-                      {trimmed}
+                      {renderInlineLinks(trimmed)}
                     </p>
                   );
                 })}
