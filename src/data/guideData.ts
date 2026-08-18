@@ -578,7 +578,7 @@ And peace, once reclaimed, changes how you move through everything.
 ---
 
 **With all my heart,**
-**Dr. Kenisha Elaine Todd**`,
+**Dr. Kenisha Todd**`,
     capacityResults: ["overflowing", "steady", "reserve", "empty", "gentle-care"],
     isFree: false,
   },
