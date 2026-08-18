@@ -69,8 +69,8 @@ const About = () => {
                 </span>
               </p>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed">
-                That realization changed how I lead. It also became the foundation for{" "}
-                <span className="font-script text-2xl md:text-3xl text-accent">Can’t Worry About It...CWAI.</span>
+              That realization changed how I lead. It also became the foundation for{" "}
+                <span className="font-script text-2xl md:text-3xl text-accent whitespace-nowrap">Can’t Worry About It...CWAI.</span>
               </p>
             </section>
 
