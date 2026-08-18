@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="CWAI | Can't Worry About It | Leadership Capacity & Emotional Capacity Tools"
-        description="Leadership capacity and emotional capacity tools for high-achieving leaders. Check your capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Todd."
+        title="CWAI | The Leadership Capacity Framework | Dr. Kenisha Todd"
+        description="Lead with clarity. Act with intention. Release with purpose. The Leadership Capacity Framework by Dr. Kenisha Todd helps high-achieving leaders check capacity, regulate stress, and lead with purpose."
         path="/"
       />
       <Navigation />
@@ -29,10 +29,10 @@ const Index = () => {
           {/* Hero */}
           <section className="text-center mb-16 animate-fade-in">
             <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">
-              CWAI <span className="sr-only">| Emotional Capacity Tools for Leaders</span>
+              CWAI™ <span className="sr-only">| The Leadership Capacity Framework</span>
             </h1>
-            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">Can't Worry About It</p>
-            <p className="font-serif text-lg md:text-xl text-muted-foreground mb-2">Emotional Capacity Tools for Leaders</p>
+            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">The Leadership Capacity Framework</p>
+            <p className="font-serif text-lg md:text-xl text-muted-foreground mb-2">Lead with clarity. Act with intention. Release with purpose.</p>
             <p className="text-muted-foreground mb-8">by Dr. Kenisha Todd</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving leaders to check their capacity, regulate stress, and receive guidance without pressure.
