@@ -4,92 +4,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CWAI Design System - Calm, Warm, Nurturing */
+/* CWAI Design System - Ivory, Black, CWAI Yellow */
 
 @layer base {
   :root {
-    /* Core Palette - Warm Neutrals */
-    --background: 35 30% 96%; /* Warm cream */
-    --foreground: 25 20% 20%; /* Warm charcoal */
+    /* Core Palette - Warm Ivory */
+    --background: 41 47% 94%; /* #F7F2E8 */
+    --foreground: 0 0% 7%; /* #111111 */
 
-    --card: 35 25% 94%; /* Soft beige */
-    --card-foreground: 25 20% 20%;
+    --card: 42 50% 97%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 35 30% 96%;
-    --popover-foreground: 25 20% 20%;
+    --popover: 41 47% 94%;
+    --popover-foreground: 0 0% 7%;
 
-    /* Primary - Soft Brown */
-    --primary: 25 30% 35%;
-    --primary-foreground: 35 30% 96%;
+    /* Primary - Black */
+    --primary: 0 0% 7%;
+    --primary-foreground: 41 47% 94%;
 
-    /* Secondary - Sage Green */
-    --secondary: 100 20% 85%;
-    --secondary-foreground: 100 25% 25%;
+    /* Secondary - Deeper Ivory */
+    --secondary: 41 32% 89%;
+    --secondary-foreground: 0 0% 7%;
 
-    /* Muted - Warm Taupe */
-    --muted: 30 15% 88%;
-    --muted-foreground: 25 15% 45%;
+    /* Muted */
+    --muted: 41 25% 90%;
+    --muted-foreground: 30 6% 35%;
 
-    /* Accent - Muted Gold */
-    --accent: 42 45% 75%;
-    --accent-foreground: 42 40% 25%;
+    /* Accent - CWAI Yellow */
+    --accent: 44 90% 57%; /* #F4C430 */
+    --accent-foreground: 0 0% 7%;
 
     /* Additional Semantic Colors */
-    --destructive: 0 45% 55%;
-    --destructive-foreground: 35 30% 96%;
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 41 47% 94%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 90%;
-    --ring: 42 45% 65%;
+    --border: 40 18% 84%;
+    --input: 40 18% 88%;
+    --ring: 44 90% 57%;
 
     --radius: 1rem;
 
     /* Custom CWAI Colors */
-    --sage: 100 20% 75%;
-    --sage-dark: 100 25% 35%;
-    --gold: 42 50% 70%;
-    --gold-dark: 42 45% 45%;
-    --terracotta: 18 40% 60%;
-    --blush: 10 35% 88%;
-    --cream: 40 35% 95%;
-    --warm-brown: 25 35% 30%;
-    
+    --sage: 41 32% 88%;
+    --sage-dark: 0 0% 7%;
+    --gold: 44 90% 57%;
+    --gold-dark: 44 82% 40%;
+    --terracotta: 44 82% 40%;
+    --blush: 41 40% 91%;
+    --cream: 42 50% 97%;
+    --warm-brown: 0 0% 7%;
+
     /* Capacity Result Colors */
-    --overflowing: 100 30% 75%;
-    --steady: 100 25% 80%;
-    --reserve: 42 45% 75%;
-    --empty: 18 35% 75%;
-    --gentle-care: 10 30% 85%;
+    --overflowing: 44 90% 57%;
+    --steady: 41 40% 91%;
+    --reserve: 44 90% 72%;
+    --empty: 41 25% 86%;
+    --gentle-care: 42 50% 97%;
   }
 
   .dark {
-    --background: 25 20% 12%;
-    --foreground: 35 25% 92%;
+    --background: 0 0% 7%;
+    --foreground: 41 47% 94%;
 
-    --card: 25 18% 16%;
-    --card-foreground: 35 25% 92%;
+    --card: 0 0% 11%;
+    --card-foreground: 41 47% 94%;
 
-    --popover: 25 20% 12%;
-    --popover-foreground: 35 25% 92%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 41 47% 94%;
 
-    --primary: 35 30% 85%;
-    --primary-foreground: 25 25% 15%;
+    --primary: 41 47% 94%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 100 15% 25%;
-    --secondary-foreground: 100 20% 85%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 41 47% 94%;
 
-    --muted: 25 15% 22%;
-    --muted-foreground: 30 15% 65%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 40 12% 70%;
 
-    --accent: 42 35% 45%;
-    --accent-foreground: 42 40% 90%;
+    --accent: 44 90% 57%;
+    --accent-foreground: 0 0% 7%;
 
-    --destructive: 0 45% 40%;
-    --destructive-foreground: 35 30% 96%;
+    --destructive: 0 55% 42%;
+    --destructive-foreground: 41 47% 94%;
 
-    --border: 25 15% 25%;
-    --input: 25 15% 25%;
-    --ring: 42 35% 55%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 44 90% 57%;
+
+    --sage: 0 0% 16%;
+    --sage-dark: 41 47% 94%;
+    --gold: 44 90% 57%;
+    --gold-dark: 44 90% 62%;
+    --terracotta: 44 90% 62%;
+    --blush: 0 0% 16%;
+    --cream: 0 0% 11%;
+    --warm-brown: 41 47% 94%;
+
+    --overflowing: 44 90% 57%;
+    --steady: 0 0% 18%;
+    --reserve: 44 70% 45%;
+    --empty: 0 0% 20%;
+    --gentle-care: 0 0% 14%;
   }
 }
 
