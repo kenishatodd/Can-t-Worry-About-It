@@ -94,7 +94,7 @@ If you are not sure where your stress is coming from, start with the CWAI Capaci
     metaTitle: "How to Manage Anxiety at Work | CWAI",
     metaDescription:
       "Gentle strategies for managing work anxiety in the moment — plus a simple way to understand what your nervous system is really asking for.",
-    publishedAt: "2026-08-18",
+    publishedAt: "2026-06-18",
     readTime: "5 min read",
     category: "Emotional Wellness",
     excerpt:
@@ -169,7 +169,7 @@ The CWAI Guide includes reflections and practices for moments when anxiety feels
     metaTitle: "What Is Emotional Capacity? | CWAI",
     metaDescription:
       "Emotional capacity is not about being strong all the time. It is about knowing how full your cup is and making decisions from that place. Learn the CWAI framework.",
-    publishedAt: "2026-08-18",
+    publishedAt: "2026-05-20",
     readTime: "7 min read",
     category: "Leadership & Capacity",
     excerpt:
