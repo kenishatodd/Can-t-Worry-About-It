@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import type { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import { blogPosts, getBlogPostBySlug } from "@/data/blogPosts";
@@ -17,6 +18,37 @@ const BlogPost = () => {
   const relatedPosts = blogPosts
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2);
+
+  // Render inline markdown links as React Router links
+  const renderInlineLinks = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
+    let key = 0;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(<span key={key++}>{text.slice(lastIndex, match.index)}</span>);
+      }
+      parts.push(
+        <Link
+          key={key++}
+          to={match[2]}
+          className="text-primary hover:text-primary/80 underline underline-offset-2"
+        >
+          {match[1]}
+        </Link>
+      );
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(<span key={key++}>{text.slice(lastIndex)}</span>);
+    }
+
+    return parts;
+  };
 
   return (
     <>
@@ -134,7 +166,7 @@ const BlogPost = () => {
                       <ul key={index} className="mb-6 space-y-3 list-disc pl-5">
                         {items.map((item, i) => (
                           <li key={i} className="text-foreground text-lg leading-relaxed">
-                            {item.slice(2)}
+                            {renderInlineLinks(item.slice(2))}
                           </li>
                         ))}
                       </ul>
@@ -156,7 +188,7 @@ const BlogPost = () => {
 
                   return (
                     <p key={index} className="text-foreground text-lg leading-relaxed mb-6">
-                      {trimmed}
+                      {renderInlineLinks(trimmed)}
                     </p>
                   );
                 })}
