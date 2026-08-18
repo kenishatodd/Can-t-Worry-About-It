@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="CWAI — Can't Worry About It | Emotional Capacity Tools for Leaders"
-        description="Check your emotional capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Todd."
+        title="CWAI — Can't Worry About It | Leadership Wellness & Emotional Capacity Tools"
+        description="Leadership wellness and emotional capacity tools for high-achieving leaders. Check your capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Todd."
         path="/"
       />
       <Navigation />
