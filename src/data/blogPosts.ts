@@ -90,7 +90,7 @@ If you are not sure where your stress is coming from, start with the CWAI Capaci
   },
   {
     slug: "manage-anxiety-at-work",
-    title: "How to Manage Anxiety at Work as a High-Achieving Woman",
+    title: "How to Manage Anxiety at Work as a High-Achieving Leader",
     metaTitle: "How to Manage Anxiety at Work | CWAI",
     metaDescription:
       "Gentle strategies for managing work anxiety in the moment — plus a simple way to understand what your nervous system is really asking for.",
@@ -103,7 +103,7 @@ If you are not sure where your stress is coming from, start with the CWAI Capaci
 
 Anxiety at work does not always look like panic. Sometimes it looks like over-preparing for every meeting. Sometimes it looks like replaying conversations after they have ended. Sometimes it looks like saying yes to everything because you are afraid of what happens if you stop.
 
-If you are a high-achieving woman, your anxiety may be hidden under competence. That does not mean it is not costing you.
+If you are a high-achieving leader, your anxiety may be hidden under competence. That does not mean it is not costing you.
 
 ## Name the story beneath the feeling
 
