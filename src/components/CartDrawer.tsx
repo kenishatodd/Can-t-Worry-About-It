@@ -113,6 +113,7 @@ export const CartDrawer = () => {
                             size="icon"
                             className="h-7 w-7 rounded-full"
                             onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
+                            aria-label={`Decrease quantity of ${item.product.node.title}`}
                           >
                             <Minus className="h-3 w-3" />
                           </Button>
@@ -122,6 +123,7 @@ export const CartDrawer = () => {
                             size="icon"
                             className="h-7 w-7 rounded-full"
                             onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
+                            aria-label={`Increase quantity of ${item.product.node.title}`}
                           >
                             <Plus className="h-3 w-3" />
                           </Button>
