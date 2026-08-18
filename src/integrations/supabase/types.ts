@@ -35,10 +35,35 @@ export type Database = {
         }
         Relationships: []
       }
+      guide_chapter_content: {
+        Row: {
+          chapter_id: string
+          content: string
+          updated_at: string
+        }
+        Insert: {
+          chapter_id: string
+          content: string
+          updated_at?: string
+        }
+        Update: {
+          chapter_id?: string
+          content?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "guide_chapter_content_chapter_id_fkey"
+            columns: ["chapter_id"]
+            isOneToOne: true
+            referencedRelation: "guide_chapters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       guide_chapters: {
         Row: {
           capacity_results: string[] | null
-          content: string
           created_at: string
           description: string
           id: string
@@ -50,7 +75,6 @@ export type Database = {
         }
         Insert: {
           capacity_results?: string[] | null
-          content: string
           created_at?: string
           description: string
           id?: string
@@ -62,7 +86,6 @@ export type Database = {
         }
         Update: {
           capacity_results?: string[] | null
-          content?: string
           created_at?: string
           description?: string
           id?: string
@@ -121,36 +144,7 @@ export type Database = {
       }
     }
     Views: {
-      guide_chapter_previews: {
-        Row: {
-          capacity_results: string[] | null
-          description: string | null
-          id: string | null
-          is_free: boolean | null
-          slug: string | null
-          sort_order: number | null
-          title: string | null
-        }
-        Insert: {
-          capacity_results?: string[] | null
-          description?: string | null
-          id?: string | null
-          is_free?: boolean | null
-          slug?: string | null
-          sort_order?: number | null
-          title?: string | null
-        }
-        Update: {
-          capacity_results?: string[] | null
-          description?: string | null
-          id?: string | null
-          is_free?: boolean | null
-          slug?: string | null
-          sort_order?: number | null
-          title?: string | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Functions: {
       has_guide_access: { Args: { _user_id: string }; Returns: boolean }
