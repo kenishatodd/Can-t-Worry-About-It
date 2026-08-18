@@ -165,7 +165,7 @@ const BlogPost = () => {
                       <ul key={index} className="mb-6 space-y-3 list-disc pl-5">
                         {items.map((item, i) => (
                           <li key={i} className="text-foreground text-lg leading-relaxed">
-                            {item.slice(2)}
+                            {renderInlineLinks(item.slice(2))}
                           </li>
                         ))}
                       </ul>
