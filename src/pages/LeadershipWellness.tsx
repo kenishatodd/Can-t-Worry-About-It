@@ -108,7 +108,7 @@ const LeadershipWellness = () => {
                 Why Leadership Wellness Matters Now
               </h2>
               <p className="text-foreground/90 text-lg leading-relaxed mb-6">
-                Leaders are asked to navigate uncertainty, support their people, and deliver results — often while managing their own invisible load. Without attention to wellness, the same drive that makes a leader effective becomes the reason they burn out.
+                Leaders are asked to navigate uncertainty, support their people, and deliver results, often while managing their own invisible load. Without attention to wellness, the same drive that makes a leader effective becomes the reason they burn out.
               </p>
               <p className="text-foreground/90 text-lg leading-relaxed">
                 When leadership wellness is present, decisions are clearer, relationships are healthier, and teams feel safer. When it is missing, reactivity replaces strategy, and exhaustion replaces vision.
@@ -142,7 +142,7 @@ const LeadershipWellness = () => {
                 The CWAI Approach to Leadership Wellness
               </h2>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-8">
-                CWAI — Can't Worry About It — is a leadership and capacity framework. It helps leaders take accountability, recognize their limits, and release what is not theirs to carry.
+                CWAI (Can't Worry About It) is a leadership and capacity framework. It helps leaders take accountability, recognize their limits, and release what is not theirs to carry.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {practices.map((practice, index) => {
@@ -171,7 +171,7 @@ const LeadershipWellness = () => {
                 CWAI Comes After Accountability
               </h2>
               <p className="text-lg md:text-xl leading-relaxed mb-6 opacity-95">
-                Leadership wellness is not avoidance. It is not pretending challenges do not exist. CWAI means handling what is yours to handle — the conversation, the decision, the action — and then releasing what you cannot control.
+                Leadership wellness is not avoidance. It is not pretending challenges do not exist. CWAI means handling what is yours to handle: the conversation, the decision, the action | and then releasing what you cannot control.
               </p>
               <p className="text-lg md:text-xl leading-relaxed opacity-95">
                 That release is where wellness lives.

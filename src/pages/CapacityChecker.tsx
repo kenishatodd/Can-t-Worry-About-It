@@ -69,7 +69,7 @@ const CapacityChecker = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="Emotional Capacity Quiz — Free Capacity Checker | CWAI"
+        title="Emotional Capacity Quiz | Free Capacity Checker | CWAI"
         description="Take the free emotional capacity quiz: a short self-assessment of your stress load, boundaries, rest, and support, with gentle next steps for leaders."
         path="/capacity-checker"
         jsonLd={quizJsonLd}

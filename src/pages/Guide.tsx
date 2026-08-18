@@ -9,7 +9,7 @@ const Guide = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="The CWAI Guide — Wisdom for Every Capacity Level"
+        title="The CWAI Guide | Wisdom for Every Capacity Level"
         description="Read The CWAI Guide by Dr. Kenisha Todd: practical chapters on capacity, boundaries, and letting go of what you can't control."
         path="/guide"
       />

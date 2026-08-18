@@ -7,7 +7,7 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       <Seo
-        title="CWAI Shop — Coming Soon"
+        title="CWAI Shop | Coming Soon"
         description="The CWAI shop is coming soon. Gentle reminders to wear and self-care you can carry with you, from Dr. Kenisha Todd."
         path="/shop"
       />
