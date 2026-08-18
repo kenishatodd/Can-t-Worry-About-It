@@ -21,10 +21,10 @@ const Blog = () => {
         />
         <meta property="og:url" content="https://www.cantworryaboutit.com/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta property="og:image" content="https://www.cantworryaboutit.com/cwai-social-preview.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Leadership & Capacity Blog | CWAI" />
-        <meta name="twitter:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta name="twitter:image" content="https://www.cantworryaboutit.com/cwai-social-preview.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-calm">

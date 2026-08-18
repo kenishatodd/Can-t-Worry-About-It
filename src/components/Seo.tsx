@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_URL = "https://www.cantworryaboutit.com";
-const DEFAULT_IMAGE = `${SITE_URL}/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/cwai-social-preview.jpg`;
 
 interface SeoProps {
   title: string;
