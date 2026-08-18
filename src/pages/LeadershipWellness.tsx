@@ -20,7 +20,7 @@ const practices = [
     icon: Users,
     title: "Distribute the load",
     description:
-      "Sustainable leaders know what belongs to them and what belongs to someone else. Wellness includes trusting your team with responsibility.",
+      "Sustainable leaders know what belongs to them and what belongs to someone else. Capacity includes trusting your team with responsibility.",
   },
   {
     icon: Heart,
@@ -44,7 +44,7 @@ const LeadershipWellness = () => {
       <Seo
         title="Leadership Capacity: A Framework for Sustainable Leadership | CWAI"
         description="Leadership capacity helps high-achieving leaders lead with clarity, capacity, and purpose without burning out. Explore the CWAI approach by Dr. Kenisha Todd."
-        path="/leadership-wellness"
+        path="/leadership-capacity"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
@@ -61,10 +61,10 @@ const LeadershipWellness = () => {
             name: "Can't Worry About It",
             "@id": "https://www.cantworryaboutit.com/#organization",
           },
-          url: "https://www.cantworryaboutit.com/leadership-wellness",
+          url: "https://www.cantworryaboutit.com/leadership-capacity",
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.cantworryaboutit.com/leadership-wellness",
+            "@id": "https://www.cantworryaboutit.com/leadership-capacity",
           },
         }}
       />
@@ -108,7 +108,7 @@ const LeadershipWellness = () => {
                 Why Leadership Capacity Matters Now
               </h2>
               <p className="text-foreground/90 text-lg leading-relaxed mb-6">
-                Leaders are asked to navigate uncertainty, support their people, and deliver results, often while managing their own invisible load. Without attention to wellness, the same drive that makes a leader effective becomes the reason they burn out.
+                Leaders are asked to navigate uncertainty, support their people, and deliver results, often while managing their own invisible load. Without attention to capacity, the same drive that makes a leader effective becomes the reason they burn out.
               </p>
               <p className="text-foreground/90 text-lg leading-relaxed">
                 When leadership capacity is present, decisions are clearer, relationships are healthier, and teams feel safer. When it is missing, reactivity replaces strategy, and exhaustion replaces vision.
@@ -121,7 +121,7 @@ const LeadershipWellness = () => {
                 Signs Your Leadership Capacity Needs Attention
               </h2>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-6">
-                Wellness does not usually collapse overnight. It erodes through small compromises. Here are common signals that your capacity is being depleted:
+                Capacity does not usually collapse overnight. It erodes through small compromises. Here are common signals that your capacity is being depleted:
               </p>
               <ul className="space-y-3 mb-8">
                 {signs.map((sign, index) => (
@@ -132,7 +132,7 @@ const LeadershipWellness = () => {
                 ))}
               </ul>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed">
-                If these feel familiar, the issue is not your commitment. It is that your leadership system has not yet made wellness non-negotiable.
+                If these feel familiar, the issue is not your commitment. It is that your leadership system has not yet made capacity non-negotiable.
               </p>
             </section>
 
@@ -174,7 +174,7 @@ const LeadershipWellness = () => {
                 Leadership capacity is not avoidance. It is not pretending challenges do not exist. CWAI means handling what is yours to handle: the conversation, the decision, the action | and then releasing what you cannot control.
               </p>
               <p className="text-lg md:text-xl leading-relaxed opacity-95">
-                That release is where wellness lives.
+                That release is where capacity lives.
               </p>
             </section>
 
