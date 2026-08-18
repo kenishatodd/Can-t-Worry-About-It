@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      guide_access: {
+        Row: {
+          granted_at: string
+          has_access: boolean
+          id: string
+          user_id: string
+        }
+        Insert: {
+          granted_at?: string
+          has_access?: boolean
+          id?: string
+          user_id: string
+        }
+        Update: {
+          granted_at?: string
+          has_access?: boolean
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       guide_chapters: {
         Row: {
           capacity_results: string[] | null
@@ -100,9 +121,39 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      guide_chapter_previews: {
+        Row: {
+          capacity_results: string[] | null
+          description: string | null
+          id: string | null
+          is_free: boolean | null
+          slug: string | null
+          sort_order: number | null
+          title: string | null
+        }
+        Insert: {
+          capacity_results?: string[] | null
+          description?: string | null
+          id?: string | null
+          is_free?: boolean | null
+          slug?: string | null
+          sort_order?: number | null
+          title?: string | null
+        }
+        Update: {
+          capacity_results?: string[] | null
+          description?: string | null
+          id?: string | null
+          is_free?: boolean | null
+          slug?: string | null
+          sort_order?: number | null
+          title?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
+      has_guide_access: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
