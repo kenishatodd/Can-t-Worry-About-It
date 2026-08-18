@@ -53,6 +53,9 @@ const CapacityChecker = () => {
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-2xl mx-auto">
+          <h1 className="font-serif text-3xl md:text-4xl text-primary text-center mb-8">
+            Emotional Capacity Checker
+          </h1>
           {!result ? (
             <>
               <ProgressDots total={totalQuestions} current={answeredCount} className="justify-center mb-8" />

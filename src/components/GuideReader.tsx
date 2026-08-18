@@ -224,9 +224,9 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
       {/* Header */}
       <div className="text-center mb-8">
         <BookOpen className="w-12 h-12 text-primary mx-auto mb-4" />
-        <h2 className="font-serif text-3xl md:text-4xl text-primary mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl text-primary mb-2">
           The CWAI Guide
-        </h2>
+        </h1>
         <p className="text-muted-foreground">
           by Dr. Kenisha Elaine
         </p>

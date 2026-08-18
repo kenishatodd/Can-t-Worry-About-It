@@ -22,8 +22,10 @@ const Index = () => {
         <div className="container max-w-4xl mx-auto">
           {/* Hero */}
           <section className="text-center mb-16 animate-fade-in">
-            <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">CWAI</h1>
-            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">Can't Worry About It</p>
+            <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">
+              CWAI <span className="sr-only">— Can't Worry About It</span>
+            </h1>
+            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2" aria-hidden="true">Can't Worry About It</p>
             <p className="text-muted-foreground mb-8">by Dr. Kenisha Elaine</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving women to check their capacity, regulate stress, and receive guidance without pressure.
@@ -48,7 +50,7 @@ const Index = () => {
             {features.map((feature) => (
               <Link key={feature.path} to={feature.path} className="bg-card rounded-2xl p-6 shadow-soft hover-lift group">
                 <feature.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-serif text-xl text-primary mb-2">{feature.title}</h3>
+                <h2 className="font-serif text-xl text-primary mb-2">{feature.title}</h2>
                 <p className="text-muted-foreground">{feature.description}</p>
               </Link>
             ))}
