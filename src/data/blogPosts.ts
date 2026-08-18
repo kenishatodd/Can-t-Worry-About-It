@@ -75,7 +75,7 @@ Some days the answer is food. Some days it is silence. Some days it is a short w
 
 If you want a simple way to check in before you push through another afternoon, try the [Capacity Checker](/capacity-checker). It takes a few minutes and tells you the truth about what you are working with today.
 
-And if you want the longer view on building a leadership practice that does not run on depletion, read about [leadership wellness](/leadership-wellness).
+And if you want the longer view on building a leadership practice that does not run on depletion, read about [leadership capacity](/leadership-wellness).
 
 The job will keep going. Make sure you do too.`,
   },
@@ -144,7 +144,7 @@ Recognizing burnout is not the same as fixing it, but it is the only honest plac
 
 Start by getting an accurate reading with the [Capacity Checker](/capacity-checker), then choose one structural change. Choose a protected break, a delegated task, a boundary you actually hold.
 
-Sustainable leadership is not about doing less. It is about knowing what you have and leading from that truth. Learn more about [leadership wellness](/leadership-wellness).`,
+Sustainable leadership is not about doing less. It is about knowing what you have and leading from that truth. Learn more about [leadership capacity](/leadership-wellness).`,
   },
   {
 
@@ -224,9 +224,9 @@ If you are not sure where your stress is coming from, start with the CWAI Capaci
 
 [Check your capacity today](/capacity-checker).
 
-## Explore leadership wellness
+## Explore leadership capacity
 
-For a deeper look at how emotional capacity, rest, and sustainable leadership connect, read about [leadership wellness](/leadership-wellness).`,
+For a deeper look at how emotional capacity, rest, and sustainable leadership connect, read about [leadership capacity](/leadership-wellness).`,
   },
   {
     slug: "manage-anxiety-at-work",
@@ -377,9 +377,9 @@ The CWAI Capacity Checker is designed to help you assess your emotional capacity
 
 [Check your emotional capacity](/capacity-checker).
 
-## Leadership wellness starts with awareness
+## Leadership capacity starts with awareness
 
-Emotional capacity is the foundation of [leadership wellness](/leadership-wellness). When leaders know their own capacity, they can protect it, and lead from a place of clarity instead of depletion.`,
+Emotional capacity is the foundation of [leadership capacity](/leadership-wellness). When leaders know their own capacity, they can protect it, and lead from a place of clarity instead of depletion.`,
   },
 ];
 

@@ -63,9 +63,9 @@ const About = () => {
                 My work sits at the intersection of leadership development, wellness, counseling, and visual storytelling. I support educators, leaders, and organizations doing meaningful work who want to build strong people, healthy cultures, and sustainable systems without believing exhaustion is the price of impact.
               </p>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-6">
-                I believe leadership wellness is a strategic discipline, not a soft skill. Learn more about my approach to{" "}
+                I believe leadership capacity is a strategic discipline, not a soft skill. Learn more about my approach to{" "}
                 <Link to="/leadership-wellness" className="text-primary hover:underline font-medium">
-                  leadership wellness
+                  leadership capacity
                 </Link>
                 .
               </p>
