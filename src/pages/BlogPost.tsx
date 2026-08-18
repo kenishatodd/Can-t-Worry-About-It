@@ -18,6 +18,37 @@ const BlogPost = () => {
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2);
 
+  // Render inline markdown links as React Router links
+  const renderInlineLinks = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
+    let key = 0;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(<span key={key++}>{text.slice(lastIndex, match.index)}</span>);
+      }
+      parts.push(
+        <Link
+          key={key++}
+          to={match[2]}
+          className="text-primary hover:text-primary/80 underline underline-offset-2"
+        >
+          {match[1]}
+        </Link>
+      );
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(<span key={key++}>{text.slice(lastIndex)}</span>);
+    }
+
+    return parts;
+  };
+
   return (
     <>
       <Helmet>
