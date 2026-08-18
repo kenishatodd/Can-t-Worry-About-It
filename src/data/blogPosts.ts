@@ -28,11 +28,11 @@ Somewhere along the way, leaders started treating the skipped lunch as proof of 
 
 Let me say this plainly: nobody is going to give you a reward for not taking a lunch. There is no plaque, no bonus, no promotion attached to your hunger. What is attached to it is a bill. Your body is the one who pays it.
 
-## The day the job kept going without him
+## The day the job kept going without her
 
 I was leading a team when one of my employees passed away.
 
-I remember the grief. But what I remember even more clearly is what happened next: the work did not stop. Not for a day, not for a week. I had the daunting task of replacing him. I had to clean out his office, his handwriting still on the notes, his things still where he left them. And within two weeks, the position was filled.
+I remember the grief. But what I remember even more clearly is what happened next: the work did not stop. Not for a day, not for a week. I had the daunting task of replacing her. I had to clean out her office, her handwriting still on the notes, her things still where she left them. And within two weeks, the position was filled.
 
 Two weeks.
 
