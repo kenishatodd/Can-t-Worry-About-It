@@ -45,10 +45,10 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm font-medium transition-colors hover:text-foreground border-b-2 pb-1",
                   location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-foreground border-accent"
+                    : "text-muted-foreground border-transparent"
                 )}
               >
                 {item.label}
