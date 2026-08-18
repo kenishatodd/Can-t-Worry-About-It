@@ -17,6 +17,7 @@ import AdminGuide from "./pages/AdminGuide";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
+import LeadershipWellness from "./pages/LeadershipWellness";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/about" element={<About />} />
+            <Route path="/leadership-wellness" element={<LeadershipWellness />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />
