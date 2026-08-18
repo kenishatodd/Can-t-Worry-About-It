@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import QuizSectionCard from "@/components/QuizSectionCard";
@@ -48,14 +49,44 @@ const CapacityChecker = () => {
 
   const isLastQuestion = currentSectionIndex === quizSections.length - 1 && currentQuestionIndex === currentSection.questions.length - 1;
 
+  const quizJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    name: "Emotional Capacity Quiz",
+    description:
+      "A short self-assessment that measures your current emotional capacity across stress load, boundaries, rest, and support so you know what you can realistically carry right now.",
+    url: "https://cantworryaboutit.com/capacity-checker",
+    educationalLevel: "Beginner",
+    about: { "@type": "Thing", name: "Emotional capacity" },
+    provider: {
+      "@type": "Organization",
+      name: "CWAI \u2014 Can't Worry About It",
+      url: "https://cantworryaboutit.com",
+    },
+    numberOfQuestions: totalQuestions,
+  };
+
   return (
     <div className="min-h-screen bg-gradient-calm">
+      <Seo
+        title="Emotional Capacity Quiz — Free Capacity Checker | CWAI"
+        description="Take the free emotional capacity quiz: a short self-assessment of your stress load, boundaries, rest, and support, with gentle next steps for leaders."
+        path="/capacity-checker"
+        jsonLd={quizJsonLd}
+      />
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-2xl mx-auto">
           <h1 className="font-serif text-3xl md:text-4xl text-primary text-center mb-8">
             Emotional Capacity Checker
           </h1>
+          {!result && (
+            <p className="text-center text-muted-foreground max-w-xl mx-auto mb-8">
+              A free emotional capacity quiz in {totalQuestions} short questions. It looks at your
+              current stress load, boundaries, rest, and support, then gives you a capacity level
+              with gentle next steps you can actually act on today.
+            </p>
+          )}
           {!result ? (
             <>
               <ProgressDots total={totalQuestions} current={answeredCount} className="justify-center mb-8" />

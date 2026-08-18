@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -75,6 +76,7 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-gradient-calm flex items-center justify-center px-4">
+      <Seo title="Sign In | CWAI" description="Sign in to your CWAI account to save your capacity checks, journal entries, and guide progress." path="/auth" noindex />
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sage/30 mb-4">

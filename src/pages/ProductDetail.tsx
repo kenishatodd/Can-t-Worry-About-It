@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -118,6 +119,25 @@ const ProductDetail = () => {
   const hasMultipleVariants = variants.length > 1;
   const images = node.images.edges;
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: node.title,
+    description: node.description,
+    image: images.map((img) => img.node.url),
+    url: `https://cantworryaboutit.com/shop/${node.handle}`,
+    brand: { "@type": "Brand", name: "CWAI \u2014 Can't Worry About It" },
+    offers: {
+      "@type": "Offer",
+      price: parseFloat(selectedVariant?.price.amount || node.priceRange.minVariantPrice.amount).toFixed(2),
+      priceCurrency: selectedVariant?.price.currencyCode || node.priceRange.minVariantPrice.currencyCode,
+      availability: selectedVariant?.availableForSale
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      url: `https://cantworryaboutit.com/shop/${node.handle}`,
+    },
+  };
+
   const handleAddToCart = () => {
     if (!selectedVariant) return;
 
@@ -143,6 +163,14 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-gradient-calm">
+      <Seo
+        title={`${node.title} | CWAI Shop`}
+        description={(node.description || `${node.title} from the CWAI shop.`).slice(0, 155)}
+        path={`/shop/${node.handle}`}
+        type="product"
+        image={images[0]?.node.url}
+        jsonLd={productJsonLd}
+      />
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-5xl mx-auto">
