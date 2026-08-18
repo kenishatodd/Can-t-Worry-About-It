@@ -77,6 +77,7 @@ const JournalEditor = () => {
             size="icon"
             onClick={handleNewPrompt}
             className="rounded-full"
+            aria-label="Get a new journal prompt"
           >
             <RefreshCw className="w-4 h-4" />
           </Button>
@@ -127,6 +128,7 @@ const JournalEditor = () => {
                     size="icon"
                     onClick={() => handleDeleteEntry(entry.id)}
                     className="opacity-0 group-hover:opacity-100 transition-opacity rounded-full w-8 h-8"
+                    aria-label={`Delete journal entry from ${entry.date}`}
                   >
                     <Trash2 className="w-3 h-3" />
                   </Button>
