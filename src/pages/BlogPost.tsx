@@ -22,7 +22,7 @@ const BlogPost = () => {
   // Render inline markdown links as React Router links
   const renderInlineLinks = (text: string) => {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-    const parts: React.ReactNode[] = [];
+    const parts: ReactNode[] = [];
     let lastIndex = 0;
     let match;
     let key = 0;
