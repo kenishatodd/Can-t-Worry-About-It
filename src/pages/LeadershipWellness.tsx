@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import { Heart, Wind, CheckCircle, ArrowRight, Sparkles, Users } from "lucide-react";
+import { Heart, Wind, CheckCircle, ArrowRight, Sparkles, Users, Search, Scale, PlayCircle, Hand } from "lucide-react";
 
 const practices = [
   {
@@ -36,6 +36,41 @@ const signs = [
   "Difficulty sleeping or truly resting",
   "A sense of being 'on' even during downtime",
   "Losing enthusiasm for work you once cared about",
+];
+
+const frameworkSteps = [
+  {
+    letter: "C",
+    word: "CHECK",
+    icon: Search,
+    question: "What is happening, and what capacity do I have?",
+    description:
+      "Pause and assess the situation honestly. Name your current emotional, mental, and physical capacity before deciding what to do next.",
+  },
+  {
+    letter: "W",
+    word: "WEIGH",
+    icon: Scale,
+    question: "What matters here? What is my responsibility?",
+    description:
+      "Discern what belongs to you and what belongs to someone else. Weigh urgency against importance, and ownership against influence.",
+  },
+  {
+    letter: "A",
+    word: "ACT",
+    icon: PlayCircle,
+    question: "What action, conversation, decision, delegation, or boundary is required?",
+    description:
+      "Take responsibility for your part. Have the hard conversation, make the decision, set the boundary, or delegate what is not yours to carry.",
+  },
+  {
+    letter: "I",
+    word: "INTENTIONALLY RELEASE",
+    icon: Hand,
+    question: "After I've acted responsibly, what do I need to stop carrying?",
+    description:
+      "Accountability first, release second. Once you have done what is yours to do, let go of outcomes, opinions, and burdens outside your control.",
+  },
 ];
 
 const LeadershipWellness = () => {
@@ -113,6 +148,41 @@ const LeadershipWellness = () => {
               <p className="text-foreground/90 text-lg leading-relaxed">
                 When leadership capacity is present, decisions are clearer, relationships are healthier, and teams feel safer. When it is missing, reactivity replaces strategy, and exhaustion replaces vision.
               </p>
+            </section>
+
+            {/* CWAI Framework */}
+            <section className="mb-16">
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">
+                The CWAI Framework
+              </h2>
+              <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-8">
+                CWAI is more than a name. It is a four-step practice for leaders who want to stay effective without sacrificing themselves. Each step builds on the one before it.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {frameworkSteps.map((step, index) => {
+                  const Icon = step.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="bg-card/60 rounded-xl p-6 border border-border hover:shadow-soft transition-shadow"
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-accent" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-bold text-accent">{step.letter}</span>
+                          <h3 className="font-serif text-xl text-foreground leading-none">
+                            {step.word}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="font-medium text-foreground/90 mb-2">{step.question}</p>
+                      <p className="text-foreground/80 leading-relaxed">{step.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </section>
 
             {/* Signs */}
