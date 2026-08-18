@@ -28,7 +28,7 @@ const Index = () => {
             <p className="font-serif text-2xl md:text-3xl text-foreground mb-2" aria-hidden="true">Can't Worry About It</p>
             <p className="text-muted-foreground mb-8">by Dr. Kenisha Elaine</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
-              A gentle space for high-achieving women to check their capacity, regulate stress, and receive guidance without pressure.
+              A gentle space for high-achieving leaders to check their capacity, regulate stress, and receive guidance without pressure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="rounded-xl bg-primary hover:bg-primary/90 h-14 px-8 text-lg">

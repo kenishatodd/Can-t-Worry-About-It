@@ -11,13 +11,13 @@ const Blog = () => {
         <title>Leadership & Capacity Blog | CWAI</title>
         <meta
           name="description"
-          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving women. From Dr. Kenisha Elaine and CWAI."
+          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders. From Dr. Kenisha Elaine and CWAI."
         />
         <link rel="canonical" href="https://cantworryaboutit.com/blog" />
         <meta property="og:title" content="Leadership & Capacity Blog | CWAI" />
         <meta
           property="og:description"
-          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving women."
+          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders."
         />
         <meta property="og:url" content="https://cantworryaboutit.com/blog" />
         <meta property="og:type" content="website" />
@@ -32,7 +32,7 @@ const Blog = () => {
                 Leadership & Capacity
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Wisdom for high-achieving women who are learning to lead without losing themselves.
+                Wisdom for high-achieving leaders who are learning to lead without losing themselves.
               </p>
             </section>
 
