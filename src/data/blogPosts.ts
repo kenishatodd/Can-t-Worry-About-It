@@ -16,12 +16,12 @@ export const blogPosts: BlogPost[] = [
     title: "Nobody Gives You a Trophy for Skipping Lunch",
     metaTitle: "Why Leaders Need to Take a Lunch Break | CWAI",
     metaDescription:
-      "Skipping lunch is not dedication — it is depletion. Dr. Kenisha Todd on why leaders must protect their break, and the loss that taught her the job never stops.",
+      "Skipping lunch is not dedication. It is depletion. Dr. Kenisha Todd on why leaders must protect their break, and the loss that taught her the job never stops.",
     publishedAt: "2026-08-14",
     readTime: "6 min read",
     category: "Leadership & Capacity",
     excerpt:
-      "There is no award for working through lunch. There is only a slow erosion of your health, your judgment, and your presence. Here is the moment I learned it — and what changed.",
+      "There is no award for working through lunch. There is only a slow erosion of your health, your judgment, and your presence. Here is the moment I learned it, and what changed.",
     content: `## The badge nobody hands out
 
 Somewhere along the way, leaders started treating the skipped lunch as proof of commitment. Eating at the desk. Taking calls through the only unclaimed thirty minutes of the day. Saying "I'll grab something later," and later never comes.
