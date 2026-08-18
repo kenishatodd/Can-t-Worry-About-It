@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import type { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import { blogPosts, getBlogPostBySlug } from "@/data/blogPosts";
