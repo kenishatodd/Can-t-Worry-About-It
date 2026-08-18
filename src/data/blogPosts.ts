@@ -182,9 +182,9 @@ Emotional capacity is your inner resource. It includes your energy, your emotion
 
 When your capacity is full, you can lead with clarity. When it is low, even small demands feel heavy.
 
-## Why high-achieving women lose capacity first
+## Why high achievers lose capacity first
 
-High-achieving women often carry invisible loads: expectations, emotional labor, caretaking, and the pressure to perform while appearing calm. These demands do not always show up on a calendar, but they consistently drain capacity.
+High achievers often carry invisible loads: expectations, emotional labor, caretaking, and the pressure to perform while appearing calm. These demands do not always show up on a calendar, but they consistently drain capacity.
 
 Over time, this leads to:
 
