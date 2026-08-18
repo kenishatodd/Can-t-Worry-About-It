@@ -228,7 +228,7 @@ const GuideReader = ({ isPaidUser = false }: GuideReaderProps) => {
           The CWAI Guide
         </h1>
         <p className="text-muted-foreground">
-          by Dr. Kenisha Elaine
+          by Dr. Kenisha Todd
         </p>
         {(isAdmin || isAdminEmail) && (
           <Link to="/admin/guide">

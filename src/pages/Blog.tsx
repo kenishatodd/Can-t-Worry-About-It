@@ -11,7 +11,7 @@ const Blog = () => {
         <title>Leadership & Capacity Blog | CWAI</title>
         <meta
           name="description"
-          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders. From Dr. Kenisha Elaine and CWAI."
+          content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders. From Dr. Kenisha Todd and CWAI."
         />
         <link rel="canonical" href="https://cantworryaboutit.com/blog" />
         <meta property="og:title" content="Leadership & Capacity Blog | CWAI" />

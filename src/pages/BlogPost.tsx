@@ -33,7 +33,7 @@ const BlogPost = () => {
         <meta name="twitter:image" content="https://cantworryaboutit.com/cwai-social-preview.jpg" />
         <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />
         <meta property="article:modified_time" content={new Date(post.publishedAt).toISOString()} />
-        <meta property="article:author" content="Dr. Kenisha Elaine" />
+        <meta property="article:author" content="Dr. Kenisha Todd" />
         <meta property="article:section" content={post.category} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.metaTitle} />
@@ -58,7 +58,7 @@ const BlogPost = () => {
             description: post.metaDescription,
             author: {
               "@type": "Person",
-              name: "Dr. Kenisha Elaine",
+              name: "Dr. Kenisha Todd",
             },
             publisher: {
               "@type": "Organization",

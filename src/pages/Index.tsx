@@ -20,7 +20,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-calm">
       <Seo
         title="CWAI — Can't Worry About It | Emotional Capacity Tools for Leaders"
-        description="Check your emotional capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Elaine."
+        description="Check your emotional capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Todd."
         path="/"
       />
       <Navigation />
@@ -32,7 +32,7 @@ const Index = () => {
               CWAI <span className="sr-only">— Can't Worry About It</span>
             </h1>
             <p className="font-serif text-2xl md:text-3xl text-foreground mb-2" aria-hidden="true">Can't Worry About It</p>
-            <p className="text-muted-foreground mb-8">by Dr. Kenisha Elaine</p>
+            <p className="text-muted-foreground mb-8">by Dr. Kenisha Todd</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving leaders to check their capacity, regulate stress, and receive guidance without pressure.
             </p>

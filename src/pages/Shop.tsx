@@ -37,7 +37,7 @@ const Shop = () => {
     <div className="min-h-screen bg-gradient-calm">
       <Seo
         title="CWAI Shop — Gentle Reminders You Can Wear"
-        description="Shop CWAI apparel and self-care goods. Gentle reminders to carry with you, from Dr. Kenisha Elaine."
+        description="Shop CWAI apparel and self-care goods. Gentle reminders to carry with you, from Dr. Kenisha Todd."
         path="/shop"
       />
       <Navigation />
