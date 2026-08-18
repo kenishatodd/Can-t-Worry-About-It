@@ -29,9 +29,10 @@ const Index = () => {
           {/* Hero */}
           <section className="text-center mb-16 animate-fade-in">
             <h1 className="font-script text-6xl md:text-8xl font-bold text-foreground mb-4">
-              CWAI <span className="sr-only">— Can't Worry About It</span>
+              CWAI <span className="sr-only">— Emotional Capacity Tools for Leaders</span>
             </h1>
-            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2" aria-hidden="true">Can't Worry About It</p>
+            <p className="font-serif text-2xl md:text-3xl text-foreground mb-2">Can't Worry About It</p>
+            <p className="font-serif text-lg md:text-xl text-muted-foreground mb-2">Emotional Capacity Tools for Leaders</p>
             <p className="text-muted-foreground mb-8">by Dr. Kenisha Todd</p>
             <p className="text-lg text-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               A gentle space for high-achieving leaders to check their capacity, regulate stress, and receive guidance without pressure.

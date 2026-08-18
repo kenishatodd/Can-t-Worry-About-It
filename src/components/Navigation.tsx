@@ -66,7 +66,7 @@ const Navigation = () => {
             ) : user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="relative">
+                  <Button variant="ghost" size="icon" className="relative" aria-label="User profile menu">
                     <User className="w-5 h-5" />
                     {isSubscribed && (
                       <Crown className="w-3 h-3 text-gold-dark absolute -top-1 -right-1" />
