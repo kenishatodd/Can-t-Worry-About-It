@@ -26,17 +26,17 @@ export const blogPosts: BlogPost[] = [
 
 Somewhere along the way, leaders started treating the skipped lunch as proof of commitment. Eating at the desk. Taking calls through the only unclaimed thirty minutes of the day. Saying "I'll grab something later," and later never comes.
 
-Let me say this plainly: nobody is going to give you a reward for not taking a lunch. There is no plaque, no bonus, no promotion attached to your hunger. What is attached to it is a bill — and your body is the one who pays it.
+Let me say this plainly: nobody is going to give you a reward for not taking a lunch. There is no plaque, no bonus, no promotion attached to your hunger. What is attached to it is a bill. Your body is the one who pays it.
 
 ## The day the job kept going without him
 
 I was leading a team when one of my employees passed away.
 
-I remember the grief. But what I remember even more clearly is what happened next: the work did not stop. Not for a day, not for a week. I had the daunting task of replacing him. I had to clean out his office — his handwriting still on the notes, his things still where he left them. And within two weeks, the position was filled.
+I remember the grief. But what I remember even more clearly is what happened next: the work did not stop. Not for a day, not for a week. I had the daunting task of replacing him. I had to clean out his office, his handwriting still on the notes, his things still where he left them. And within two weeks, the position was filled.
 
 Two weeks.
 
-Standing in that office, I understood something I could not un-understand. The organization will move forward. The calendar will refill. The role will be posted. That is not cruelty; it is simply how institutions work. But it means the only person guarding your well-being is you.
+Standing in that office, I understood something I could not un-understand. The organization will move forward. The calendar will refill. The role will be posted. That is not cruelty. It is simply how institutions work. But it means the only person guarding your well-being is you.
 
 If I gave everything to a job that would replace me in fourteen days, and gave nothing to myself, that was not dedication. That was a bad trade.
 
@@ -44,30 +44,30 @@ If I gave everything to a job that would replace me in fourteen days, and gave n
 
 Working through your break is not a neutral choice. It compounds:
 
-- **Decision quality drops.** Blood sugar, hydration, and cognitive fatigue directly affect judgment. Your afternoon decisions are worse than your morning ones — and you make them anyway.
-- **Reactivity goes up.** The leader who has not eaten or paused is the leader who snaps in the 3 p.m. meeting.
-- **Health erodes quietly.** Chronic stress without recovery is linked to elevated blood pressure, disrupted sleep, digestive problems, and cardiovascular strain.
-- **Your team copies you.** If you eat at your desk, your team learns that rest is negotiable. Culture is not what you say in the all-hands; it is what you model at noon.
+- Decision quality drops. Blood sugar, hydration, and cognitive fatigue directly affect judgment. Your afternoon decisions are worse than your morning ones, and you make them anyway.
+- Reactivity goes up. The leader who has not eaten or paused is the leader who snaps in the 3 p.m. meeting.
+- Health erodes quietly. Chronic stress without recovery is linked to elevated blood pressure, disrupted sleep, digestive problems, and cardiovascular strain.
+- Your team copies you. If you eat at your desk, your team learns that rest is negotiable. Culture is not what you say in the all-hands. It is what you model at noon.
 
 ## Rest is part of the work, not a break from it
 
 A lunch break is not time taken away from your leadership. It is the maintenance that makes your leadership sustainable. You would not run equipment continuously without service intervals. You are not different because you can push through.
 
-The push-through is the problem. Capacity that is never restored does not stay flat — it declines.
+The push-through is the problem. Capacity that is never restored does not stay flat. It declines.
 
 ## How to actually take the break
 
 Knowing this and doing it are different. Start small and make it structural, not aspirational:
 
-1. **Put it on the calendar as a real meeting.** Title it. Set it to busy. Treat a request to move it the way you would treat a request to move a client call.
-2. **Leave the desk.** A different chair, a courtyard, your car, a walk around the block. The location change is what signals your nervous system that the shift is real.
-3. **Eat without a screen for ten minutes.** Not thirty if thirty is impossible. Ten.
-4. **Tell your team you are doing it.** "I take 12:30 to 1:00" gives everyone else permission to have a limit too.
-5. **Protect it hardest on the worst days.** The day you feel you cannot afford lunch is the day you most need it.
+1. Put it on the calendar as a real meeting. Title it. Set it to busy. Treat a request to move it the way you would treat a request to move a client call.
+2. Leave the desk. A different chair, a courtyard, your car, a walk around the block. The location change is what signals your nervous system that the shift is real.
+3. Eat without a screen for ten minutes. Not thirty if thirty is impossible. Ten.
+4. Tell your team you are doing it. "I take 12:30 to 1:00" gives everyone else permission to have a limit too.
+5. Protect it hardest on the worst days. The day you feel you cannot afford lunch is the day you most need it.
 
 ## What I do differently now
 
-I stopped measuring my worth by how much I could absorb without complaining. I started asking a better question at midday: *what do I have left, and what do I need to keep going well?*
+I stopped measuring my worth by how much I could absorb without complaining. I started asking a better question at midday: what do I have left, and what do I need to keep going well?
 
 Some days the answer is food. Some days it is silence. Some days it is a short walk and one honest breath. The point is that I ask.
 
