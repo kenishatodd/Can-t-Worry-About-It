@@ -150,6 +150,41 @@ const LeadershipWellness = () => {
               </p>
             </section>
 
+            {/* CWAI Framework */}
+            <section className="mb-16">
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">
+                The CWAI Framework
+              </h2>
+              <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-8">
+                CWAI is more than a name. It is a four-step practice for leaders who want to stay effective without sacrificing themselves. Each step builds on the one before it.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {frameworkSteps.map((step, index) => {
+                  const Icon = step.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="bg-card/60 rounded-xl p-6 border border-border hover:shadow-soft transition-shadow"
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-accent" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-bold text-accent">{step.letter}</span>
+                          <h3 className="font-serif text-xl text-foreground leading-none">
+                            {step.word}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="font-medium text-foreground/90 mb-2">{step.question}</p>
+                      <p className="text-foreground/80 leading-relaxed">{step.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
             {/* Signs */}
             <section className="mb-16">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
