@@ -55,13 +55,13 @@ const CapacityChecker = () => {
     name: "Emotional Capacity Quiz",
     description:
       "A short self-assessment that measures your current emotional capacity across stress load, boundaries, rest, and support so you know what you can realistically carry right now.",
-    url: "https://cantworryaboutit.com/capacity-checker",
+    url: "https://www.cantworryaboutit.com/capacity-checker",
     educationalLevel: "Beginner",
     about: { "@type": "Thing", name: "Emotional capacity" },
     provider: {
       "@type": "Organization",
       name: "CWAI \u2014 Can't Worry About It",
-      url: "https://cantworryaboutit.com",
+      url: "https://www.cantworryaboutit.com",
     },
     numberOfQuestions: totalQuestions,
   };

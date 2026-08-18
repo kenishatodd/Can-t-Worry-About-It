@@ -23,14 +23,14 @@ const BlogPost = () => {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://cantworryaboutit.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.cantworryaboutit.com/blog/${post.slug}`} />
         <meta property="og:title" content={post.metaTitle} />
         <meta property="og:description" content={post.metaDescription} />
-        <meta property="og:url" content={`https://cantworryaboutit.com/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://www.cantworryaboutit.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="CWAI" />
-        <meta property="og:image" content="https://cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
-        <meta name="twitter:image" content="https://cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta property="og:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta name="twitter:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
         <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />
         <meta property="article:modified_time" content={new Date(post.publishedAt).toISOString()} />
         <meta property="article:author" content="Dr. Kenisha Todd" />
@@ -63,10 +63,10 @@ const BlogPost = () => {
             publisher: {
               "@type": "Organization",
               name: "CWAI",
-              url: "https://cantworryaboutit.com",
+              url: "https://www.cantworryaboutit.com",
             },
             datePublished: post.publishedAt,
-            url: `https://cantworryaboutit.com/blog/${post.slug}`,
+            url: `https://www.cantworryaboutit.com/blog/${post.slug}`,
           })}
         </script>
       </Helmet>

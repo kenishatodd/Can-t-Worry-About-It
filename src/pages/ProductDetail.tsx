@@ -125,7 +125,7 @@ const ProductDetail = () => {
     name: node.title,
     description: node.description,
     image: images.map((img) => img.node.url),
-    url: `https://cantworryaboutit.com/shop/${node.handle}`,
+    url: `https://www.cantworryaboutit.com/shop/${node.handle}`,
     brand: { "@type": "Brand", name: "CWAI \u2014 Can't Worry About It" },
     offers: {
       "@type": "Offer",
@@ -134,7 +134,7 @@ const ProductDetail = () => {
       availability: selectedVariant?.availableForSale
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
-      url: `https://cantworryaboutit.com/shop/${node.handle}`,
+      url: `https://www.cantworryaboutit.com/shop/${node.handle}`,
     },
   };
 

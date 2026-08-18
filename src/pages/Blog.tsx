@@ -13,18 +13,18 @@ const Blog = () => {
           name="description"
           content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders. From Dr. Kenisha Todd and CWAI."
         />
-        <link rel="canonical" href="https://cantworryaboutit.com/blog" />
+        <link rel="canonical" href="https://www.cantworryaboutit.com/blog" />
         <meta property="og:title" content="Leadership & Capacity Blog | CWAI" />
         <meta
           property="og:description"
           content="Articles on emotional capacity, stress at work, and leadership wellness for high-achieving leaders."
         />
-        <meta property="og:url" content="https://cantworryaboutit.com/blog" />
+        <meta property="og:url" content="https://www.cantworryaboutit.com/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta property="og:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Leadership & Capacity Blog | CWAI" />
-        <meta name="twitter:image" content="https://cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
+        <meta name="twitter:image" content="https://www.cantworryaboutit.com/__l5e/assets-v1/1d9caf27-26ac-45cf-850f-0ea73c8d3e45/dr-kenisha-todd-headshot.png" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-calm">
