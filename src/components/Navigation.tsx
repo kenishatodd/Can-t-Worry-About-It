@@ -25,7 +25,7 @@ const Navigation = () => {
     { path: "/journal", label: "Journal" },
     { path: "/guide", label: "CWAI Guide" },
     { path: "/blog", label: "Blog" },
-    { path: "/leadership-wellness", label: "Leadership Wellness" },
+    { path: "/leadership-wellness", label: "Leadership Capacity" },
     { path: "/shop", label: "Shop" },
     { path: "/about", label: "About" },
   ];
