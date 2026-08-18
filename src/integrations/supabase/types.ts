@@ -14,10 +14,56 @@ export type Database = {
   }
   public: {
     Tables: {
+      guide_access: {
+        Row: {
+          granted_at: string
+          has_access: boolean
+          id: string
+          user_id: string
+        }
+        Insert: {
+          granted_at?: string
+          has_access?: boolean
+          id?: string
+          user_id: string
+        }
+        Update: {
+          granted_at?: string
+          has_access?: boolean
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      guide_chapter_content: {
+        Row: {
+          chapter_id: string
+          content: string
+          updated_at: string
+        }
+        Insert: {
+          chapter_id: string
+          content: string
+          updated_at?: string
+        }
+        Update: {
+          chapter_id?: string
+          content?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "guide_chapter_content_chapter_id_fkey"
+            columns: ["chapter_id"]
+            isOneToOne: true
+            referencedRelation: "guide_chapters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       guide_chapters: {
         Row: {
           capacity_results: string[] | null
-          content: string
           created_at: string
           description: string
           id: string
@@ -29,7 +75,6 @@ export type Database = {
         }
         Insert: {
           capacity_results?: string[] | null
-          content: string
           created_at?: string
           description: string
           id?: string
@@ -41,7 +86,6 @@ export type Database = {
         }
         Update: {
           capacity_results?: string[] | null
-          content?: string
           created_at?: string
           description?: string
           id?: string
@@ -103,6 +147,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      has_guide_access: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

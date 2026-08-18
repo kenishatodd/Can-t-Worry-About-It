@@ -95,6 +95,13 @@ serve(async (req) => {
 
     logStep("Payment check complete", { hasPurchased });
 
+    await supabaseClient
+      .from("guide_access")
+      .upsert(
+        { user_id: user.id, has_access: hasPurchased },
+        { onConflict: "user_id" }
+      );
+
     return new Response(JSON.stringify({
       subscribed: hasPurchased,
     }), {
