@@ -29,6 +29,8 @@ const BlogPost = () => {
         <meta property="og:url" content={`https://cantworryaboutit.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="CWAI" />
+        <meta property="og:image" content="https://cantworryaboutit.com/cwai-social-preview.jpg" />
+        <meta name="twitter:image" content="https://cantworryaboutit.com/cwai-social-preview.jpg" />
         <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />
         <meta property="article:modified_time" content={new Date(post.publishedAt).toISOString()} />
         <meta property="article:author" content="Dr. Kenisha Elaine" />

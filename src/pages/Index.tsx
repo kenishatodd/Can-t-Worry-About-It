@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import PremiumUpgrade from "@/components/PremiumUpgrade";
 import { useAuth } from "@/contexts/AuthContext";
 import { Heart, Wind, BookOpen, PenLine, Sparkles } from "lucide-react";
+import Seo from "@/components/Seo";
 
 const Index = () => {
   const { user, isSubscribed } = useAuth();
@@ -17,6 +18,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-calm">
+      <Seo
+        title="CWAI — Can't Worry About It | Emotional Capacity Tools for Leaders"
+        description="Check your emotional capacity, regulate stress, and get gentle guidance without pressure. CWAI by Dr. Kenisha Elaine."
+        path="/"
+      />
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-4xl mx-auto">

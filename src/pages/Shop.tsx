@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import { ProductCard } from "@/components/ProductCard";
 import { fetchProducts, ShopifyProduct } from "@/lib/shopify";
 import { Loader2, ShoppingBag } from "lucide-react";
+import Seo from "@/components/Seo";
 
 const Shop = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -34,6 +35,11 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-gradient-calm">
+      <Seo
+        title="CWAI Shop — Gentle Reminders You Can Wear"
+        description="Shop CWAI apparel and self-care goods. Gentle reminders to carry with you, from Dr. Kenisha Elaine."
+        path="/shop"
+      />
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-6xl mx-auto">
