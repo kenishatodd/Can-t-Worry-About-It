@@ -47,7 +47,10 @@ const About = () => {
                 />
               </div>
               <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
-                About <span className="font-script text-5xl md:text-6xl text-accent">Dr. Kenisha Elaine Todd</span>
+                About{" "}
+                <span className="font-script text-4xl sm:text-5xl md:text-6xl text-accent whitespace-nowrap">
+                  Dr. Kenisha Elaine Todd
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Leadership consultant, educator, counselor, serial entrepreneur, and creative strategist committed to helping people and organizations lead with clarity, capacity, and purpose.
