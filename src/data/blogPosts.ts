@@ -92,7 +92,7 @@ The job will keep going. Make sure you do too.`,
       "Burnout in leaders rarely announces itself. It shows up as numbness, over-functioning, and a full calendar you resent. Here is how to catch it early.",
     content: `## Burnout does not always look like falling apart
 
-The stereotype of burnout is a dramatic breakdown. In leadership, it almost never looks like that. It looks like someone who still hits deadlines, still runs the meeting, still gets praised — and feels nothing about any of it.
+The stereotype of burnout is a dramatic breakdown. In leadership, it almost never looks like that. It looks like someone who still hits deadlines, still runs the meeting, still gets praised, and feels nothing about any of it.
 
 That gap between visible competence and internal emptiness is the real warning sign.
 
@@ -104,7 +104,7 @@ Early depletion feels like stress. Later depletion feels like flatness. If wins 
 
 ## 2. Small requests feel disproportionately heavy
 
-A five-minute favor lands like a project. That is not laziness — that is a capacity signal.
+A five-minute favor lands like a project. That is not laziness. That is a capacity signal.
 
 **Try:** before saying yes, ask "what would I have to give up to do this well?"
 
@@ -124,7 +124,7 @@ You take the weekend and return just as tired. That usually means the depletion 
 
 Work gets your regulated self. Home gets what is left. Many leaders notice burnout first in their relationships.
 
-**Try:** build a ten-minute transition between work and home — a walk, silence in the car, three slow breaths before the door.
+**Try:** build a ten-minute transition between work and home. Take a walk, silence in the car, three slow breaths before the door.
 
 ## 6. Your calendar is full and you resent all of it
 
@@ -136,13 +136,13 @@ Not one thing on it is wrong, and yet you dread the whole week. That is a sign y
 
 No breaks. No lunch. No unclaimed minutes. If you cannot locate a pause in your week, your nervous system has not had a chance to reset in a long time.
 
-**Try:** the [Pause Tools](/pause-tools) — short grounding practices built for the middle of a hard day.
+**Try:** the [Pause Tools](/pause-tools), short grounding practices built for the middle of a hard day.
 
 ## What to do with what you notice
 
 Recognizing burnout is not the same as fixing it, but it is the only honest place to start. You cannot rebuild capacity you refuse to acknowledge is low.
 
-Start by getting an accurate reading with the [Capacity Checker](/capacity-checker), then choose one structural change — a protected break, a delegated task, a boundary you actually hold.
+Start by getting an accurate reading with the [Capacity Checker](/capacity-checker), then choose one structural change. Choose a protected break, a delegated task, a boundary you actually hold.
 
 Sustainable leadership is not about doing less. It is about knowing what you have and leading from that truth. Learn more about [leadership wellness](/leadership-wellness).`,
   },
@@ -152,7 +152,7 @@ Sustainable leadership is not about doing less. It is about knowing what you hav
     title: "How to Reduce Stress at Work Without Burning Out",
     metaTitle: "How to Reduce Stress at Work Without Burning Out | CWAI",
     metaDescription:
-      "Practical, gentle ways to lower stress at work — from micro-pauses to boundary-setting — so high-achieving leaders can lead without burning out.",
+      "Practical, gentle ways to lower stress at work, from micro-pauses to boundary-setting, so high-achieving leaders can lead without burning out.",
     publishedAt: "2026-08-18",
     readTime: "6 min read",
     category: "Leadership & Capacity",
@@ -210,7 +210,7 @@ Simple practices help:
 - Placing a hand on your chest or belly grounds you in the present moment.
 - A brief walk, even indoors, can shift your mental state.
 
-The CWAI Pause Tools were designed for exactly these moments — short, grounding practices you can use between meetings or during a hard day.
+The CWAI Pause Tools were designed for exactly these moments, short grounding practices you can use between meetings or during a hard day.
 
 ## You do not have to earn rest
 
@@ -220,7 +220,7 @@ Rest is not a reward. It is a requirement for sustainable leadership.
 
 ## Try the Capacity Checker
 
-If you are not sure where your stress is coming from, start with the CWAI Capacity Checker. It helps you tune into your energy, emotions, and needs in just a few minutes — without pressure, performance, or perfection.
+If you are not sure where your stress is coming from, start with the CWAI Capacity Checker. It helps you tune into your energy, emotions, and needs in just a few minutes, without pressure, performance, or perfection.
 
 [Check your capacity today](/capacity-checker).
 
@@ -273,7 +273,7 @@ This simple practice brings your attention back to the present moment, where mos
 
 ## Create a pre-anxiety ritual
 
-If you know certain situations trigger anxiety — presentations, performance reviews, difficult conversations — create a ritual for before they happen.
+If you know certain situations trigger anxiety, like presentations, performance reviews, or difficult conversations, create a ritual for before they happen.
 
 A pre-anxiety ritual might include:
 
@@ -345,7 +345,7 @@ At CWAI, we think about emotional capacity in four levels:
 
 **Low.** You are running on reserves. Decisions feel heavy, and you may feel anxious, detached, or reactive.
 
-**Depleted.** You have very little left to give. Rest is not optional — it is urgent.
+**Depleted.** You have very little left to give. Rest is not optional. It is urgent.
 
 Knowing your level helps you choose the right response. A depleted day is not a day for big decisions. A full day is.
 
@@ -379,7 +379,7 @@ The CWAI Capacity Checker is designed to help you assess your emotional capacity
 
 ## Leadership wellness starts with awareness
 
-Emotional capacity is the foundation of [leadership wellness](/leadership-wellness). When leaders know their own capacity, they can protect it — and lead from a place of clarity instead of depletion.`,
+Emotional capacity is the foundation of [leadership wellness](/leadership-wellness). When leaders know their own capacity, they can protect it, and lead from a place of clarity instead of depletion.`,
   },
 ];
 
