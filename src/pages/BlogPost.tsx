@@ -28,6 +28,26 @@ const BlogPost = () => {
         <meta property="og:description" content={post.metaDescription} />
         <meta property="og:url" content={`https://cantworryaboutit.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="CWAI" />
+        <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />
+        <meta property="article:modified_time" content={new Date(post.publishedAt).toISOString()} />
+        <meta property="article:author" content="Dr. Kenisha Elaine" />
+        <meta property="article:section" content={post.category} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.metaTitle} />
+        <meta name="twitter:description" content={post.metaDescription} />
+        <meta name="twitter:label1" content="Published" />
+        <meta
+          name="twitter:data1"
+          content={new Date(post.publishedAt).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        />
+        <meta name="twitter:label2" content="Reading time" />
+        <meta name="twitter:data2" content={post.readTime} />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
