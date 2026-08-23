@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import JournalEditor from "@/components/JournalEditor";
+import JournalReminders from "@/components/JournalReminders";
 import Seo from "@/components/Seo";
 
 const Journal = () => {
@@ -18,6 +19,9 @@ const Journal = () => {
             <p className="text-muted-foreground">Write without judgment. Your words are safe here.</p>
           </div>
           <JournalEditor />
+          <div className="mt-10">
+            <JournalReminders />
+          </div>
         </div>
       </main>
     </div>
