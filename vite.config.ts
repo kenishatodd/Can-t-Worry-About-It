@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => ({
         navigateFallbackDenylist: [/^\/~oauth/],
         skipWaiting: true,
         clientsClaim: true,
+        importScripts: ["sw-push.js"],
         runtimeCaching: [
           {
             urlPattern: matchNavigation,
